@@ -4430,8 +4430,8 @@ footer{color:var(--muted)}
     <li><b>Corrientes.</b> Lineal \(I\), superficial \(\vec K\) (corriente por unidad de ancho) y volumétrica \(\vec J\) (por unidad de área). La conservación de la carga da \(\nabla\cdot\vec J=-\partial\rho/\partial t\); en magnetostática, \(\nabla\cdot\vec J=0\).</li>
     <li><a class="kw" href="#t-biot-savart"><b>Biot-Savart.</b></a> Es la "ley de Coulomb" del magnetismo: cada elemento de corriente aporta \(d\vec B\propto I\,d\vec l\times\hat{\mathcal R}/\mathcal R^2\).</li>
     <li><a class="kw" href="#t-ampere"><b>Ecuaciones de B.</b></a> \(\nabla\cdot\vec B=0\) (no hay monopolos magnéticos) y \(\nabla\times\vec B=\mu_0\vec J\) (ley de Ampère).</li>
-    <li><b>Potencial vector.</b> Como \(\nabla\cdot\vec B=0\), existe \(\vec A\) con \(\vec B=\nabla\times\vec A\). Eligiendo \(\nabla\cdot\vec A=0\), cada componente cumple una ecuación de Poisson: \(\nabla^2\vec A=-\mu_0\vec J\).</li>
-    <li><b>Dipolo magnético.</b> Lejos de un lazo de corriente, \(\vec A\) y \(\vec B\) son los de un dipolo de momento \(\vec m=I\vec a\) (\(\vec a\): área vectorial).</li>
+    <li><a class="kw" href="#t-potencial-vector"><b>Potencial vector.</b></a> Como \(\nabla\cdot\vec B=0\), existe \(\vec A\) con \(\vec B=\nabla\times\vec A\). Eligiendo \(\nabla\cdot\vec A=0\), cada componente cumple una ecuación de Poisson: \(\nabla^2\vec A=-\mu_0\vec J\).</li>
+    <li><a class="kw" href="#t-dipolo-magnetico"><b>Dipolo magnético.</b></a> Lejos de un lazo de corriente, \(\vec A\) y \(\vec B\) son los de un dipolo de momento \(\vec m=I\vec a\) (\(\vec a\): área vectorial).</li>
   </ul></div>
   <div class="block" id="e5-lab"><h2><span class="ico">◎</span>Visualiza · Carga en campos E y B cruzados</h2>
     <div class="canvas-box"><canvas id="cv-e5"></canvas></div>
@@ -4444,9 +4444,9 @@ footer{color:var(--muted)}
     <div class="law"><h3><a class="kw" href="#t-fuerza-magnetica">Fuerza de Lorentz</a></h3><div class="eq">\[ \vec F=q\left(\vec E+\vec v\times\vec B\right) \qquad \vec F_{mag}=\int I\,(d\vec l\times\vec B) \]</div><p>\(W_{mag}=\int\vec F_{mag}\cdot d\vec l=0\).</p></div>
     <div class="law"><h3><a class="kw" href="#t-biot-savart">Biot-Savart</a></h3><div class="eq">\[ \vec B(\vec r)=\frac{\mu_0}{4\pi}\int\frac{\vec J(\vec r\,')\times\hat{\mathcal R}}{\mathcal R^2}\,d\tau' \]</div><p>\(\mu_0=4\pi\times10^{-7}\ \text{N/A}^2\).</p></div>
     <div class="law"><h3><a class="kw" href="#t-ampere">Divergencia y rotacional</a></h3><div class="eq">\[ \nabla\cdot\vec B=0 \qquad \nabla\times\vec B=\mu_0\vec J \]</div><p>Forma integral de la segunda: \(\oint\vec B\cdot d\vec l=\mu_0I_{enc}\).</p></div>
-    <div class="law"><h3>Potencial vector</h3><div class="eq">\[ \vec A(\vec r)=\frac{\mu_0}{4\pi}\int\frac{\vec J(\vec r\,')}{\mathcal R}\,d\tau' \]</div><p>Con \(\nabla\cdot\vec A=0\) (gauge de Coulomb). Flujo: \(\Phi=\oint\vec A\cdot d\vec l\).</p></div>
+    <div class="law"><h3><a class="kw" href="#t-potencial-vector">Potencial vector</a></h3><div class="eq">\[ \vec A(\vec r)=\frac{\mu_0}{4\pi}\int\frac{\vec J(\vec r\,')}{\mathcal R}\,d\tau' \]</div><p>Con \(\nabla\cdot\vec A=0\) (gauge de Coulomb). Flujo: \(\Phi=\oint\vec A\cdot d\vec l\).</p></div>
     <div class="law"><h3><a class="kw" href="#t-frontera">Condiciones de frontera</a></h3><div class="eq">\[ \vec B_{arr}-\vec B_{ab}=\mu_0\,\vec K\times\hat n \]</div><p>La componente normal de \(\vec B\) es continua; la tangencial salta con la corriente superficial.</p></div>
-    <div class="law"><h3>Dipolo magnético</h3><div class="eq">\[ \vec A_{dip}=\frac{\mu_0}{4\pi}\frac{\vec m\times\hat r}{r^2} \qquad \vec m=I\int d\vec a \]</div><p>El campo lejano tiene la misma forma que el de un dipolo eléctrico.</p></div>
+    <div class="law"><h3><a class="kw" href="#t-dipolo-magnetico">Dipolo magnético</a></h3><div class="eq">\[ \vec A_{dip}=\frac{\mu_0}{4\pi}\frac{\vec m\times\hat r}{r^2} \qquad \vec m=I\int d\vec a \]</div><p>El campo lejano tiene la misma forma que el de un dipolo eléctrico.</p></div>
   </div></div>
   <div class="block" id="e5-ej"><h2><span class="ico">✎</span>Ejemplo resuelto</h2><div class="example">
     <p><b>Un protón parte del reposo en una región con \(E=1000\) V/m (hacia \(+y\)) y \(B=0{,}010\) T (saliendo de la pantalla). Describe su movimiento.</b></p>
@@ -4468,13 +4468,13 @@ footer{color:var(--muted)}
   <p class="lead">Los electrones de cada átomo son pequeños lazos de corriente. En un campo externo, esos dipolos magnéticos se orientan y el material se <b>magnetiza</b>: refuerza el campo, lo debilita o incluso lo "recuerda".</p>
   <div class="toc"><a href="#e6-resumen" data-scroll>Resumen</a><a href="#e6-lab" data-scroll>Visualiza</a><a href="#e6-leyes" data-scroll>Leyes</a><a href="#e6-ej" data-scroll>Ejemplo</a></div>
   <div class="block" id="e6-resumen"><h2><span class="ico">≡</span>Resumen</h2><ul class="keypoints">
-    <li><b>Dipolo en un campo.</b> Torque \(\vec N=\vec m\times\vec B\) (lo alinea) y fuerza \(\vec F=\nabla(\vec m\cdot\vec B)\).</li>
-    <li><b>Paramagnetismo.</b> Los dipolos de espín se alinean <b>a favor</b> de \(\vec B\); el efecto es débil (\(\chi_m\sim10^{-5}\)) y lo desordena la agitación térmica.</li>
-    <li><b>Diamagnetismo.</b> El campo modifica las órbitas y aparece un dipolo inducido <b>opuesto</b> a \(\vec B\). Lo tienen todos los materiales, pero es todavía más débil.</li>
-    <li><b>Ferromagnetismo.</b> Los dipolos vecinos se alinean entre sí en <b>dominios</b>. Un campo externo hace crecer los dominios favorables y el material queda magnetizado al retirarlo (histéresis). Por encima de la temperatura de Curie se vuelve paramagnético.</li>
-    <li><b>Magnetización y corrientes ligadas.</b> \(\vec M\) es el momento dipolar por unidad de volumen. Equivale a corrientes \(\vec J_b=\nabla\times\vec M\) y \(\vec K_b=\vec M\times\hat n\).</li>
-    <li><b>Campo H.</b> \(\vec H=\vec B/\mu_0-\vec M\) cumple \(\nabla\times\vec H=\vec J_f\): solo "ve" la corriente libre, la que circula por los cables.</li>
-    <li><b>Medios lineales.</b> \(\vec M=\chi_m\vec H\) y \(\vec B=\mu\vec H\), con \(\mu=\mu_0(1+\chi_m)\). Los ferromagnéticos <b>no</b> son lineales.</li>
+    <li><a class="kw" href="#t-dipolo-magnetico"><b>Dipolo en un campo.</b></a> Torque \(\vec N=\vec m\times\vec B\) (lo alinea) y fuerza \(\vec F=\nabla(\vec m\cdot\vec B)\).</li>
+    <li><a class="kw" href="#t-magnetizacion"><b>Paramagnetismo.</b></a> Los dipolos de espín se alinean <b>a favor</b> de \(\vec B\); el efecto es débil (\(\chi_m\sim10^{-5}\)) y lo desordena la agitación térmica.</li>
+    <li><a class="kw" href="#t-magnetizacion"><b>Diamagnetismo.</b></a> El campo modifica las órbitas y aparece un dipolo inducido <b>opuesto</b> a \(\vec B\). Lo tienen todos los materiales, pero es todavía más débil.</li>
+    <li><a class="kw" href="#t-magnetizacion"><b>Ferromagnetismo.</b></a> Los dipolos vecinos se alinean entre sí en <b>dominios</b>. Un campo externo hace crecer los dominios favorables y el material queda magnetizado al retirarlo (histéresis). Por encima de la temperatura de Curie se vuelve paramagnético.</li>
+    <li><a class="kw" href="#t-magnetizacion"><b>Magnetización y corrientes ligadas.</b></a> \(\vec M\) es el momento dipolar por unidad de volumen. Equivale a corrientes \(\vec J_b=\nabla\times\vec M\) y \(\vec K_b=\vec M\times\hat n\).</li>
+    <li><a class="kw" href="#t-campo-h"><b>Campo H.</b></a> \(\vec H=\vec B/\mu_0-\vec M\) cumple \(\nabla\times\vec H=\vec J_f\): solo "ve" la corriente libre, la que circula por los cables.</li>
+    <li><a class="kw" href="#t-campo-h"><b>Medios lineales.</b></a> \(\vec M=\chi_m\vec H\) y \(\vec B=\mu\vec H\), con \(\mu=\mu_0(1+\chi_m)\). Los ferromagnéticos <b>no</b> son lineales.</li>
   </ul></div>
   <div class="block" id="e6-lab"><h2><span class="ico">◎</span>Visualiza · Curvas M–H y dominios</h2>
     <div class="canvas-box"><canvas id="cv-e6"></canvas></div>
@@ -4483,11 +4483,11 @@ footer{color:var(--muted)}
     <p class="hint">El campo aplicado \(H\) oscila entre \(\pm H_{máx}\). A la derecha, cada flecha es un dipolo (o un dominio, en el ferromagnético). En dia y paramagnéticos la pendiente se ha exagerado mucho para que se vea; en la realidad \(|\chi_m|\) es de \(10^{-5}\) a \(10^{-3}\).</p>
   </div>
   <div class="block" id="e6-leyes"><h2><span class="ico">§</span>Leyes</h2><div class="laws">
-    <div class="law"><h3>Corrientes ligadas</h3><div class="eq">\[ \vec J_b=\nabla\times\vec M \qquad \vec K_b=\vec M\times\hat n \]</div><p>Un cilindro con \(\vec M\) uniforme a lo largo del eje equivale a un solenoide con \(K_b=M\).</p></div>
-    <div class="law"><h3>Ampère para H</h3><div class="eq">\[ \nabla\times\vec H=\vec J_f \qquad \oint\vec H\cdot d\vec l=I_{f,enc} \]</div><p>Pero \(\nabla\cdot\vec H=-\nabla\cdot\vec M\neq0\) en general.</p></div>
-    <div class="law"><h3>Medios lineales</h3><div class="eq">\[ \vec M=\chi_m\vec H \qquad \vec B=\mu_0(1+\chi_m)\vec H=\mu\vec H \]</div><p>\(\chi_m>0\): paramagnético. \(\chi_m<0\): diamagnético.</p></div>
-    <div class="law"><h3>Condiciones de frontera</h3><div class="eq">\[ H^\parallel_{arr}-H^\parallel_{ab}=\vec K_f\times\hat n \qquad B^\perp_{arr}=B^\perp_{ab} \]</div><p>Análogas a las de \(\vec D\) y \(\vec E\) en dieléctricos.</p></div>
-    <div class="law"><h3>Fuerza sobre un dipolo</h3><div class="eq">\[ \vec F=\nabla(\vec m\cdot\vec B) \qquad \vec N=\vec m\times\vec B \]</div><p>Por eso un paramagnético es atraído hacia la zona de campo intenso y un diamagnético es repelido.</p></div>
+    <div class="law"><h3><a class="kw" href="#t-magnetizacion">Corrientes ligadas</a></h3><div class="eq">\[ \vec J_b=\nabla\times\vec M \qquad \vec K_b=\vec M\times\hat n \]</div><p>Un cilindro con \(\vec M\) uniforme a lo largo del eje equivale a un solenoide con \(K_b=M\).</p></div>
+    <div class="law"><h3><a class="kw" href="#t-campo-h">Ampère para H</a></h3><div class="eq">\[ \nabla\times\vec H=\vec J_f \qquad \oint\vec H\cdot d\vec l=I_{f,enc} \]</div><p>Pero \(\nabla\cdot\vec H=-\nabla\cdot\vec M\neq0\) en general.</p></div>
+    <div class="law"><h3><a class="kw" href="#t-campo-h">Medios lineales</a></h3><div class="eq">\[ \vec M=\chi_m\vec H \qquad \vec B=\mu_0(1+\chi_m)\vec H=\mu\vec H \]</div><p>\(\chi_m>0\): paramagnético. \(\chi_m<0\): diamagnético.</p></div>
+    <div class="law"><h3><a class="kw" href="#t-campo-h">Condiciones de frontera</a></h3><div class="eq">\[ H^\parallel_{arr}-H^\parallel_{ab}=\vec K_f\times\hat n \qquad B^\perp_{arr}=B^\perp_{ab} \]</div><p>Análogas a las de \(\vec D\) y \(\vec E\) en dieléctricos.</p></div>
+    <div class="law"><h3><a class="kw" href="#t-dipolo-magnetico">Fuerza sobre un dipolo</a></h3><div class="eq">\[ \vec F=\nabla(\vec m\cdot\vec B) \qquad \vec N=\vec m\times\vec B \]</div><p>Por eso un paramagnético es atraído hacia la zona de campo intenso y un diamagnético es repelido.</p></div>
   </div></div>
   <div class="block" id="e6-ej"><h2><span class="ico">✎</span>Ejemplo resuelto</h2><div class="example">
     <p><b>Un solenoide largo de 1000 vueltas/m con 2,0 A está relleno de aluminio (\(\chi_m=2{,}3\times10^{-5}\)). Halla \(H\), \(B\), \(M\) y la corriente ligada superficial.</b></p>
@@ -4510,7 +4510,7 @@ footer{color:var(--muted)}
   <div class="toc"><a href="#e7-resumen" data-scroll>Resumen</a><a href="#e7-lab" data-scroll>Visualiza</a><a href="#e7-leyes" data-scroll>Ecuaciones de Maxwell</a><a href="#e7-ej" data-scroll>Ejemplo</a></div>
   <div class="block" id="e7-resumen"><h2><span class="ico">≡</span>Resumen</h2><ul class="keypoints">
     <li><a class="kw" href="#t-ohm"><b>Ley de Ohm.</b></a> En un conductor, \(\vec J=\sigma\vec f\), donde \(\vec f\) es la fuerza por unidad de carga. Normalmente \(\vec J=\sigma\vec E\), y de ahí \(V=IR\).</li>
-    <li><b>Fuerza electromotriz.</b> \(\mathcal E=\oint\vec f\cdot d\vec l\). Al mover un lazo en un campo \(\vec B\), la fem de movimiento es \(\mathcal E=-d\Phi/dt\).</li>
+    <li><a class="kw" href="#t-faraday"><b>Fuerza electromotriz.</b></a> \(\mathcal E=\oint\vec f\cdot d\vec l\). Al mover un lazo en un campo \(\vec B\), la fem de movimiento es \(\mathcal E=-d\Phi/dt\).</li>
     <li><a class="kw" href="#t-faraday"><b>Ley de Faraday.</b></a> Un campo magnético variable induce un campo eléctrico: \(\nabla\times\vec E=-\partial\vec B/\partial t\). La ley de Lenz da el signo: la naturaleza se opone al cambio de flujo.</li>
     <li><a class="kw" href="#t-inductancia"><b>Inductancia.</b></a> El flujo en un lazo es proporcional a la corriente del otro: \(\Phi_2=M_{21}I_1\), y \(M_{21}=M_{12}\). La autoinductancia \(L\) produce una fuerza contraelectromotriz \(-L\,dI/dt\).</li>
     <li><a class="kw" href="#t-inductancia"><b>Energía magnética.</b></a> \(W=\tfrac12LI^2=\dfrac1{2\mu_0}\displaystyle\int B^2\,d\tau\).</li>
@@ -4524,7 +4524,7 @@ footer{color:var(--muted)}
   </div>
   <div class="block" id="e7-leyes"><h2><span class="ico">§</span>Ecuaciones de Maxwell</h2><div class="laws">
     <div class="law"><h3><a class="kw" href="#t-gauss">Gauss</a></h3><div class="eq">\[ \nabla\cdot\vec E=\frac{\rho}{\varepsilon_0} \]</div><p>En materia: \(\nabla\cdot\vec D=\rho_f\).</p></div>
-    <div class="law"><h3>Sin monopolos</h3><div class="eq">\[ \nabla\cdot\vec B=0 \]</div><p>Igual en el vacío y en la materia.</p></div>
+    <div class="law"><h3><a class="kw" href="#t-maxwell">Sin monopolos</a></h3><div class="eq">\[ \nabla\cdot\vec B=0 \]</div><p>Igual en el vacío y en la materia.</p></div>
     <div class="law"><h3><a class="kw" href="#t-faraday">Faraday</a></h3><div class="eq">\[ \nabla\times\vec E=-\frac{\partial\vec B}{\partial t} \qquad \mathcal E=-\frac{d\Phi}{dt} \]</div><p>Igual en el vacío y en la materia.</p></div>
     <div class="law"><h3><a class="kw" href="#t-ampere">Ampère-Maxwell</a></h3><div class="eq">\[ \nabla\times\vec B=\mu_0\vec J+\mu_0\varepsilon_0\frac{\partial\vec E}{\partial t} \]</div><p>En materia: \(\nabla\times\vec H=\vec J_f+\partial\vec D/\partial t\).</p></div>
     <div class="law"><h3><a class="kw" href="#t-inductancia">Inductancia mutua (Neumann)</a></h3><div class="eq">\[ M=\frac{\mu_0}{4\pi}\oint\oint\frac{d\vec l_1\cdot d\vec l_2}{\mathcal R} \]</div><p>Es puramente geométrica y simétrica: \(M_{12}=M_{21}\).</p></div>
@@ -4550,13 +4550,13 @@ footer{color:var(--muted)}
   <p class="lead">Los campos no son solo una forma de calcular fuerzas: <b>transportan energía, momento y momento angular</b>. El vector de Poynting indica por dónde fluye la energía.</p>
   <div class="toc"><a href="#e8-resumen" data-scroll>Resumen</a><a href="#e8-lab" data-scroll>Visualiza</a><a href="#e8-leyes" data-scroll>Leyes</a><a href="#e8-ej" data-scroll>Ejemplo</a></div>
   <div class="block" id="e8-resumen"><h2><span class="ico">≡</span>Resumen</h2><ul class="keypoints">
-    <li><b>Conservación local de la carga.</b> \(\partial\rho/\partial t=-\nabla\cdot\vec J\): la carga no desaparece de un sitio para aparecer en otro; fluye.</li>
-    <li><b>Energía del campo.</b> Densidad \(u=\tfrac12\left(\varepsilon_0E^2+B^2/\mu_0\right)\).</li>
-    <li><b>Teorema de Poynting.</b> El trabajo que los campos hacen sobre las cargas es igual a la disminución de energía del campo menos lo que sale por la frontera. El flujo de energía por unidad de área es \(\vec S=\dfrac1{\mu_0}\vec E\times\vec B\).</li>
+    <li><a class="kw" href="#t-poynting"><b>Conservación local de la carga.</b></a> \(\partial\rho/\partial t=-\nabla\cdot\vec J\): la carga no desaparece de un sitio para aparecer en otro; fluye.</li>
+    <li><a class="kw" href="#t-poynting"><b>Energía del campo.</b></a> Densidad \(u=\tfrac12\left(\varepsilon_0E^2+B^2/\mu_0\right)\).</li>
+    <li><a class="kw" href="#t-poynting"><b>Teorema de Poynting.</b></a> El trabajo que los campos hacen sobre las cargas es igual a la disminución de energía del campo menos lo que sale por la frontera. El flujo de energía por unidad de área es \(\vec S=\dfrac1{\mu_0}\vec E\times\vec B\).</li>
     <li><b>Ejemplo sorprendente:</b> en un alambre con corriente, la energía que se disipa como calor no viaja por dentro del cable; entra por los costados, desde el campo que lo rodea.</li>
-    <li><b>Momento del campo.</b> Los campos llevan momento con densidad \(\vec g=\mu_0\varepsilon_0\vec S\). Sin él, la tercera ley de Newton falla entre cargas en movimiento.</li>
-    <li><b>Tensor de esfuerzos de Maxwell</b> \(\overleftrightarrow T\). Permite calcular la fuerza sobre las cargas de un volumen integrando solo sobre su superficie.</li>
-    <li><b>Momento angular.</b> Un campo estático con \(\vec E\times\vec B\neq0\) puede guardar momento angular; al apagarlo, se transfiere a los objetos (paradoja del disco de Feynman).</li>
+    <li><a class="kw" href="#t-tensor-maxwell"><b>Momento del campo.</b></a> Los campos llevan momento con densidad \(\vec g=\mu_0\varepsilon_0\vec S\). Sin él, la tercera ley de Newton falla entre cargas en movimiento.</li>
+    <li><a class="kw" href="#t-tensor-maxwell"><b>Tensor de esfuerzos de Maxwell</b></a> \(\overleftrightarrow T\). Permite calcular la fuerza sobre las cargas de un volumen integrando solo sobre su superficie.</li>
+    <li><a class="kw" href="#t-tensor-maxwell"><b>Momento angular.</b></a> Un campo estático con \(\vec E\times\vec B\neq0\) puede guardar momento angular; al apagarlo, se transfiere a los objetos (paradoja del disco de Feynman).</li>
   </ul></div>
   <div class="block" id="e8-lab"><h2><span class="ico">◎</span>Visualiza · Energía que entra en un resistor</h2><div class="two"><div>
     <div class="canvas-box"><canvas id="cv-e8"></canvas></div>
@@ -4566,11 +4566,11 @@ footer{color:var(--muted)}
     <p class="hint" style="margin-top:12px">Un tramo de alambre de 1 m con corriente hacia la derecha. \(\vec E\) apunta a lo largo del cable, \(\vec B\) lo rodea (⊙ arriba, ⊗ abajo), y \(\vec S=\vec E\times\vec B/\mu_0\) apunta <b>hacia el cable</b>. Multiplicando \(S\) por el área lateral se obtiene exactamente \(I^2R\).</p>
   </div></div></div>
   <div class="block" id="e8-leyes"><h2><span class="ico">§</span>Leyes</h2><div class="laws">
-    <div class="law"><h3>Continuidad</h3><div class="eq">\[ \frac{\partial\rho}{\partial t}=-\nabla\cdot\vec J \]</div><p>Es consecuencia de las ecuaciones de Maxwell.</p></div>
-    <div class="law"><h3>Teorema de Poynting</h3><div class="eq">\[ \frac{dW}{dt}=-\frac{d}{dt}\int_{\mathcal V}u\,d\tau-\oint_{\mathcal S}\vec S\cdot d\vec a \]</div><p>En forma diferencial: \(\partial(u_{mec}+u_{em})/\partial t=-\nabla\cdot\vec S\).</p></div>
-    <div class="law"><h3>Poynting y energía</h3><div class="eq">\[ \vec S=\frac1{\mu_0}\vec E\times\vec B \qquad u=\frac{\varepsilon_0}{2}E^2+\frac1{2\mu_0}B^2 \]</div><p>\(\vec S\) se mide en W/m².</p></div>
-    <div class="law"><h3>Tensor de Maxwell</h3><div class="eq">\[ T_{ij}=\varepsilon_0\left(E_iE_j-\tfrac12\delta_{ij}E^2\right)+\frac1{\mu_0}\left(B_iB_j-\tfrac12\delta_{ij}B^2\right) \]</div><p>\(\vec F=\oint\overleftrightarrow T\cdot d\vec a-\varepsilon_0\mu_0\dfrac{d}{dt}\int\vec S\,d\tau\).</p></div>
-    <div class="law"><h3>Momento y momento angular</h3><div class="eq">\[ \vec g=\mu_0\varepsilon_0\vec S \qquad \vec\ell=\vec r\times\vec g \]</div><p>Densidades de momento lineal y angular del campo.</p></div>
+    <div class="law"><h3><a class="kw" href="#t-poynting">Continuidad</a></h3><div class="eq">\[ \frac{\partial\rho}{\partial t}=-\nabla\cdot\vec J \]</div><p>Es consecuencia de las ecuaciones de Maxwell.</p></div>
+    <div class="law"><h3><a class="kw" href="#t-poynting">Teorema de Poynting</a></h3><div class="eq">\[ \frac{dW}{dt}=-\frac{d}{dt}\int_{\mathcal V}u\,d\tau-\oint_{\mathcal S}\vec S\cdot d\vec a \]</div><p>En forma diferencial: \(\partial(u_{mec}+u_{em})/\partial t=-\nabla\cdot\vec S\).</p></div>
+    <div class="law"><h3><a class="kw" href="#t-poynting">Poynting y energía</a></h3><div class="eq">\[ \vec S=\frac1{\mu_0}\vec E\times\vec B \qquad u=\frac{\varepsilon_0}{2}E^2+\frac1{2\mu_0}B^2 \]</div><p>\(\vec S\) se mide en W/m².</p></div>
+    <div class="law"><h3><a class="kw" href="#t-tensor-maxwell">Tensor de Maxwell</a></h3><div class="eq">\[ T_{ij}=\varepsilon_0\left(E_iE_j-\tfrac12\delta_{ij}E^2\right)+\frac1{\mu_0}\left(B_iB_j-\tfrac12\delta_{ij}B^2\right) \]</div><p>\(\vec F=\oint\overleftrightarrow T\cdot d\vec a-\varepsilon_0\mu_0\dfrac{d}{dt}\int\vec S\,d\tau\).</p></div>
+    <div class="law"><h3><a class="kw" href="#t-tensor-maxwell">Momento y momento angular</a></h3><div class="eq">\[ \vec g=\mu_0\varepsilon_0\vec S \qquad \vec\ell=\vec r\times\vec g \]</div><p>Densidades de momento lineal y angular del campo.</p></div>
   </div></div>
   <div class="block" id="e8-ej"><h2><span class="ico">✎</span>Ejemplo resuelto</h2><div class="example">
     <p><b>Por un alambre de radio \(a=1\) mm y resistencia \(R=2\ \Omega\) en un tramo de \(L=1\) m circulan \(I=5\) A. Calcula \(\vec S\) en su superficie y la potencia que entra.</b></p>
@@ -4592,14 +4592,14 @@ footer{color:var(--muted)}
   <p class="lead">En el vacío, las ecuaciones de Maxwell se combinan en una ecuación de onda para \(\vec E\) y \(\vec B\) con velocidad \(1/\sqrt{\mu_0\varepsilon_0}=c\). La luz es una onda electromagnética.</p>
   <div class="toc"><a href="#e9-resumen" data-scroll>Resumen</a><a href="#e9-lab" data-scroll>Visualiza</a><a href="#e9-leyes" data-scroll>Leyes</a><a href="#e9-ej" data-scroll>Ejemplo</a></div>
   <div class="block" id="e9-resumen"><h2><span class="ico">≡</span>Resumen</h2><ul class="keypoints">
-    <li><b>Ondas en una dimensión.</b> \(\partial^2f/\partial z^2=\frac1{v^2}\partial^2f/\partial t^2\), con soluciones \(f(z-vt)\). Las sinusoidales se escriben en forma compleja \(\tilde f=\tilde Ae^{i(kz-\omega t)}\) y se toma la parte real.</li>
-    <li><b>Onda plana en el vacío.</b> \(\vec E\) y \(\vec B\) son perpendiculares entre sí y a la dirección de propagación, están en fase y \(B_0=E_0/c\).</li>
-    <li><b>Polarización.</b> Es la dirección de \(\vec E\). Puede ser lineal, circular o elíptica según la amplitud y la fase de sus dos componentes.</li>
-    <li><b>Energía y momento.</b> La intensidad (potencia media por unidad de área) es \(I=\tfrac12c\varepsilon_0E_0^2\). La luz ejerce una presión de radiación \(I/c\) al absorberse y \(2I/c\) al reflejarse.</li>
-    <li><b>Medios lineales.</b> La velocidad es \(v=c/n\), con índice de refracción \(n\approx\sqrt{\varepsilon_r}\).</li>
-    <li><b>Reflexión y refracción.</b> De las condiciones de frontera salen: ángulo de reflexión igual al de incidencia, la ley de Snell y las ecuaciones de Fresnel, que dan cuánta luz se refleja según la polarización. En el ángulo de Brewster la componente paralela no se refleja.</li>
-    <li><b>Conductores.</b> La onda se atenúa en una profundidad de penetración \(d=1/\kappa\); en buenos conductores es muy pequeña y casi toda la luz se refleja.</li>
-    <li><b>Dispersión.</b> En medios reales \(n\) depende de \(\omega\): por eso un prisma separa los colores.</li>
+    <li><a class="kw" href="#t-ecuacion-onda"><b>Ondas en una dimensión.</b></a> \(\partial^2f/\partial z^2=\frac1{v^2}\partial^2f/\partial t^2\), con soluciones \(f(z-vt)\). Las sinusoidales se escriben en forma compleja \(\tilde f=\tilde Ae^{i(kz-\omega t)}\) y se toma la parte real.</li>
+    <li><a class="kw" href="#t-ondas-planas"><b>Onda plana en el vacío.</b></a> \(\vec E\) y \(\vec B\) son perpendiculares entre sí y a la dirección de propagación, están en fase y \(B_0=E_0/c\).</li>
+    <li><a class="kw" href="#t-ondas-planas"><b>Polarización.</b></a> Es la dirección de \(\vec E\). Puede ser lineal, circular o elíptica según la amplitud y la fase de sus dos componentes.</li>
+    <li><a class="kw" href="#t-ondas-planas"><b>Energía y momento.</b></a> La intensidad (potencia media por unidad de área) es \(I=\tfrac12c\varepsilon_0E_0^2\). La luz ejerce una presión de radiación \(I/c\) al absorberse y \(2I/c\) al reflejarse.</li>
+    <li><a class="kw" href="#t-ondas-planas"><b>Medios lineales.</b></a> La velocidad es \(v=c/n\), con índice de refracción \(n\approx\sqrt{\varepsilon_r}\).</li>
+    <li><a class="kw" href="#t-fresnel-brewster"><b>Reflexión y refracción.</b></a> De las condiciones de frontera salen: ángulo de reflexión igual al de incidencia, la ley de Snell y las ecuaciones de Fresnel, que dan cuánta luz se refleja según la polarización. En el ángulo de Brewster la componente paralela no se refleja.</li>
+    <li><a class="kw" href="#t-conductores-plasma"><b>Conductores.</b></a> La onda se atenúa en una profundidad de penetración \(d=1/\kappa\); en buenos conductores es muy pequeña y casi toda la luz se refleja.</li>
+    <li><a class="kw" href="#t-conductores-plasma"><b>Dispersión.</b></a> En medios reales \(n\) depende de \(\omega\): por eso un prisma separa los colores.</li>
   </ul></div>
   <div class="block" id="e9-lab"><h2><span class="ico">◎</span>Visualiza</h2>
     <div class="tabs" id="e9-tabs"><button data-t="onda" class="on">Onda plana y polarización</button><button data-t="fresnel">Reflexión y refracción (Fresnel)</button></div>
@@ -4617,12 +4617,12 @@ footer{color:var(--muted)}
     </div>
   </div>
   <div class="block" id="e9-leyes"><h2><span class="ico">§</span>Leyes</h2><div class="laws">
-    <div class="law"><h3>Ecuación de onda</h3><div class="eq">\[ \nabla^2\vec E=\mu_0\varepsilon_0\frac{\partial^2\vec E}{\partial t^2} \qquad c=\frac1{\sqrt{\mu_0\varepsilon_0}} \]</div><p>Lo mismo para \(\vec B\). Sale de tomar el rotacional de Faraday y de Ampère-Maxwell.</p></div>
-    <div class="law"><h3>Onda plana monocromática</h3><div class="eq">\[ \vec E=E_0\cos(kz-\omega t+\delta)\,\hat x \qquad \vec B=\frac{E_0}{c}\cos(kz-\omega t+\delta)\,\hat y \]</div><p>\(\vec B=\frac1c\hat k\times\vec E\) y \(\omega=ck\).</p></div>
-    <div class="law"><h3>Intensidad y presión</h3><div class="eq">\[ I=\langle S\rangle=\tfrac12c\varepsilon_0E_0^2 \qquad P=\frac{I}{c} \]</div><p>Promedio temporal sobre un periodo.</p></div>
-    <div class="law"><h3>Incidencia normal</h3><div class="eq">\[ R=\left(\frac{n_1-n_2}{n_1+n_2}\right)^2 \qquad T=\frac{4n_1n_2}{(n_1+n_2)^2} \]</div><p>Con \(\mu\approx\mu_0\). Siempre \(R+T=1\).</p></div>
-    <div class="law"><h3>Snell y Brewster</h3><div class="eq">\[ n_1\sin\theta_I=n_2\sin\theta_T \qquad \tan\theta_B=\frac{n_2}{n_1} \]</div><p>A \(\theta_B\) la luz reflejada sale totalmente polarizada (perpendicular al plano de incidencia).</p></div>
-    <div class="law"><h3>Profundidad de penetración</h3><div class="eq">\[ d=\frac1\kappa\approx\sqrt{\frac{2}{\sigma\mu\omega}} \]</div><p>Aproximación para buenos conductores. En el cobre, a 60 Hz, \(d\approx8\) mm.</p></div>
+    <div class="law"><h3><a class="kw" href="#t-ondas-planas">Ecuación de onda</a></h3><div class="eq">\[ \nabla^2\vec E=\mu_0\varepsilon_0\frac{\partial^2\vec E}{\partial t^2} \qquad c=\frac1{\sqrt{\mu_0\varepsilon_0}} \]</div><p>Lo mismo para \(\vec B\). Sale de tomar el rotacional de Faraday y de Ampère-Maxwell.</p></div>
+    <div class="law"><h3><a class="kw" href="#t-ondas-planas">Onda plana monocromática</a></h3><div class="eq">\[ \vec E=E_0\cos(kz-\omega t+\delta)\,\hat x \qquad \vec B=\frac{E_0}{c}\cos(kz-\omega t+\delta)\,\hat y \]</div><p>\(\vec B=\frac1c\hat k\times\vec E\) y \(\omega=ck\).</p></div>
+    <div class="law"><h3><a class="kw" href="#t-ondas-planas">Intensidad y presión</a></h3><div class="eq">\[ I=\langle S\rangle=\tfrac12c\varepsilon_0E_0^2 \qquad P=\frac{I}{c} \]</div><p>Promedio temporal sobre un periodo.</p></div>
+    <div class="law"><h3><a class="kw" href="#t-fresnel-brewster">Incidencia normal</a></h3><div class="eq">\[ R=\left(\frac{n_1-n_2}{n_1+n_2}\right)^2 \qquad T=\frac{4n_1n_2}{(n_1+n_2)^2} \]</div><p>Con \(\mu\approx\mu_0\). Siempre \(R+T=1\).</p></div>
+    <div class="law"><h3><a class="kw" href="#t-fresnel-brewster">Snell y Brewster</a></h3><div class="eq">\[ n_1\sin\theta_I=n_2\sin\theta_T \qquad \tan\theta_B=\frac{n_2}{n_1} \]</div><p>A \(\theta_B\) la luz reflejada sale totalmente polarizada (perpendicular al plano de incidencia).</p></div>
+    <div class="law"><h3><a class="kw" href="#t-conductores-plasma">Profundidad de penetración</a></h3><div class="eq">\[ d=\frac1\kappa\approx\sqrt{\frac{2}{\sigma\mu\omega}} \]</div><p>Aproximación para buenos conductores. En el cobre, a 60 Hz, \(d\approx8\) mm.</p></div>
   </div></div>
   <div class="block" id="e9-ej"><h2><span class="ico">✎</span>Ejemplo resuelto</h2><div class="example">
     <p><b>La luz pasa del aire (\(n=1\)) a un vidrio con \(n=1{,}5\). ¿Qué fracción se refleja en incidencia normal? ¿Cuál es el ángulo de Brewster?</b></p>
@@ -4644,13 +4644,13 @@ footer{color:var(--muted)}
   <p class="lead">Las noticias electromagnéticas viajan a la velocidad de la luz. El potencial en un punto depende de dónde estaba la carga en el <b>tiempo retardado</b>, cuando salió la señal que llega ahora.</p>
   <div class="toc"><a href="#e10-resumen" data-scroll>Resumen</a><a href="#e10-lab" data-scroll>Visualiza</a><a href="#e10-leyes" data-scroll>Leyes</a><a href="#e10-ej" data-scroll>Ejemplo</a></div>
   <div class="block" id="e10-resumen"><h2><span class="ico">≡</span>Resumen</h2><ul class="keypoints">
-    <li><b>Formulación con potenciales.</b> \(\vec B=\nabla\times\vec A\) y \(\vec E=-\nabla V-\partial\vec A/\partial t\). Las dos ecuaciones de Maxwell sin fuentes se cumplen automáticamente.</li>
-    <li><b>Libertad de gauge.</b> \(\vec A\to\vec A+\nabla\lambda\) y \(V\to V-\partial\lambda/\partial t\) no cambian \(\vec E\) ni \(\vec B\). Se elige el gauge que simplifique: Coulomb (\(\nabla\cdot\vec A=0\)) o Lorenz (\(\nabla\cdot\vec A=-\mu_0\varepsilon_0\,\partial V/\partial t\)).</li>
-    <li><b>En el gauge de Lorenz</b> \(V\) y \(\vec A\) cumplen ecuaciones de onda con fuentes \(\rho\) y \(\vec J\).</li>
-    <li><b>Potenciales retardados.</b> Son como los estáticos, pero evaluando las fuentes en \(t_r=t-\mathcal R/c\).</li>
-    <li><b>Ecuaciones de Jefimenko.</b> Dan \(\vec E\) y \(\vec B\) directamente a partir de \(\rho\), \(\vec J\) y sus derivadas en el tiempo retardado.</li>
-    <li><b>Liénard-Wiechert.</b> Para una carga puntual, el potencial lleva un factor extra \(1/(1-\hat{\mathcal R}\cdot\vec v/c)\): una carga que se acerca "parece" más grande.</li>
-    <li><b>Campos de una carga en movimiento.</b> Tienen un término de velocidad (\(\propto1/\mathcal R^2\), una versión del campo de Coulomb) y un término de aceleración (\(\propto1/\mathcal R\)), que es la radiación.</li>
+    <li><a class="kw" href="#t-gauge"><b>Formulación con potenciales.</b></a> \(\vec B=\nabla\times\vec A\) y \(\vec E=-\nabla V-\partial\vec A/\partial t\). Las dos ecuaciones de Maxwell sin fuentes se cumplen automáticamente.</li>
+    <li><a class="kw" href="#t-gauge"><b>Libertad de gauge.</b></a> \(\vec A\to\vec A+\nabla\lambda\) y \(V\to V-\partial\lambda/\partial t\) no cambian \(\vec E\) ni \(\vec B\). Se elige el gauge que simplifique: Coulomb (\(\nabla\cdot\vec A=0\)) o Lorenz (\(\nabla\cdot\vec A=-\mu_0\varepsilon_0\,\partial V/\partial t\)).</li>
+    <li><a class="kw" href="#t-gauge"><b>En el gauge de Lorenz</b></a> \(V\) y \(\vec A\) cumplen ecuaciones de onda con fuentes \(\rho\) y \(\vec J\).</li>
+    <li><a class="kw" href="#t-retardados"><b>Potenciales retardados.</b></a> Son como los estáticos, pero evaluando las fuentes en \(t_r=t-\mathcal R/c\).</li>
+    <li><a class="kw" href="#t-retardados"><b>Ecuaciones de Jefimenko.</b></a> Dan \(\vec E\) y \(\vec B\) directamente a partir de \(\rho\), \(\vec J\) y sus derivadas en el tiempo retardado.</li>
+    <li><a class="kw" href="#t-lienard-wiechert"><b>Liénard-Wiechert.</b></a> Para una carga puntual, el potencial lleva un factor extra \(1/(1-\hat{\mathcal R}\cdot\vec v/c)\): una carga que se acerca "parece" más grande.</li>
+    <li><a class="kw" href="#t-lienard-wiechert"><b>Campos de una carga en movimiento.</b></a> Tienen un término de velocidad (\(\propto1/\mathcal R^2\), una versión del campo de Coulomb) y un término de aceleración (\(\propto1/\mathcal R\)), que es la radiación.</li>
   </ul></div>
   <div class="block" id="e10-lab"><h2><span class="ico">◎</span>Visualiza · Tiempo retardado</h2><div class="two"><div>
     <div class="canvas-box"><canvas id="cv-e10"></canvas></div>
@@ -4660,11 +4660,11 @@ footer{color:var(--muted)}
     <p class="hint" style="margin-top:12px">La carga emite "señales" que se expanden a velocidad \(c\). El observador (punto verde, arrástralo) siente la carga en su <b>posición retardada</b> (círculo vacío), no en la actual. Al reiniciar, el observador no siente nada hasta que le llega el primer frente. Con \(\beta\) grande, los frentes se apilan por delante: es el origen del efecto Doppler.</p>
   </div></div></div>
   <div class="block" id="e10-leyes"><h2><span class="ico">§</span>Leyes</h2><div class="laws">
-    <div class="law"><h3>Campos desde potenciales</h3><div class="eq">\[ \vec E=-\nabla V-\frac{\partial\vec A}{\partial t} \qquad \vec B=\nabla\times\vec A \]</div><p>Válidos siempre, no solo en estática.</p></div>
-    <div class="law"><h3>Gauge de Lorenz</h3><div class="eq">\[ \nabla\cdot\vec A=-\mu_0\varepsilon_0\frac{\partial V}{\partial t} \;\Rightarrow\; \Box^2V=-\frac{\rho}{\varepsilon_0},\;\; \Box^2\vec A=-\mu_0\vec J \]</div><p>\(\Box^2=\nabla^2-\mu_0\varepsilon_0\,\partial^2/\partial t^2\) es el d'alembertiano.</p></div>
-    <div class="law"><h3>Potenciales retardados</h3><div class="eq">\[ V(\vec r,t)=\frac1{4\pi\varepsilon_0}\int\frac{\rho(\vec r\,',t_r)}{\mathcal R}\,d\tau' \qquad t_r=t-\frac{\mathcal R}{c} \]</div><p>\(\vec A\) igual, con \(\mu_0\vec J/4\pi\).</p></div>
-    <div class="law"><h3>Liénard-Wiechert</h3><div class="eq">\[ V=\frac{1}{4\pi\varepsilon_0}\frac{qc}{\mathcal Rc-\vec{\mathcal R}\cdot\vec v} \qquad \vec A=\frac{\vec v}{c^2}V \]</div><p>Todo evaluado en el tiempo retardado.</p></div>
-    <div class="law"><h3>Campo de una carga puntual</h3><div class="eq">\[ \vec E=\frac{q}{4\pi\varepsilon_0}\frac{\mathcal R}{(\vec{\mathcal R}\cdot\vec u)^3}\left[(c^2-v^2)\vec u+\vec{\mathcal R}\times(\vec u\times\vec a)\right] \]</div><p>Con \(\vec u=c\hat{\mathcal R}-\vec v\). El primer término es el de velocidad; el segundo, el de radiación. \(\vec B=\frac1c\hat{\mathcal R}\times\vec E\).</p></div>
+    <div class="law"><h3><a class="kw" href="#t-gauge">Campos desde potenciales</a></h3><div class="eq">\[ \vec E=-\nabla V-\frac{\partial\vec A}{\partial t} \qquad \vec B=\nabla\times\vec A \]</div><p>Válidos siempre, no solo en estática.</p></div>
+    <div class="law"><h3><a class="kw" href="#t-gauge">Gauge de Lorenz</a></h3><div class="eq">\[ \nabla\cdot\vec A=-\mu_0\varepsilon_0\frac{\partial V}{\partial t} \;\Rightarrow\; \Box^2V=-\frac{\rho}{\varepsilon_0},\;\; \Box^2\vec A=-\mu_0\vec J \]</div><p>\(\Box^2=\nabla^2-\mu_0\varepsilon_0\,\partial^2/\partial t^2\) es el d'alembertiano.</p></div>
+    <div class="law"><h3><a class="kw" href="#t-retardados">Potenciales retardados</a></h3><div class="eq">\[ V(\vec r,t)=\frac1{4\pi\varepsilon_0}\int\frac{\rho(\vec r\,',t_r)}{\mathcal R}\,d\tau' \qquad t_r=t-\frac{\mathcal R}{c} \]</div><p>\(\vec A\) igual, con \(\mu_0\vec J/4\pi\).</p></div>
+    <div class="law"><h3><a class="kw" href="#t-lienard-wiechert">Liénard-Wiechert</a></h3><div class="eq">\[ V=\frac{1}{4\pi\varepsilon_0}\frac{qc}{\mathcal Rc-\vec{\mathcal R}\cdot\vec v} \qquad \vec A=\frac{\vec v}{c^2}V \]</div><p>Todo evaluado en el tiempo retardado.</p></div>
+    <div class="law"><h3><a class="kw" href="#t-lienard-wiechert">Campo de una carga puntual</a></h3><div class="eq">\[ \vec E=\frac{q}{4\pi\varepsilon_0}\frac{\mathcal R}{(\vec{\mathcal R}\cdot\vec u)^3}\left[(c^2-v^2)\vec u+\vec{\mathcal R}\times(\vec u\times\vec a)\right] \]</div><p>Con \(\vec u=c\hat{\mathcal R}-\vec v\). El primer término es el de velocidad; el segundo, el de radiación. \(\vec B=\frac1c\hat{\mathcal R}\times\vec E\).</p></div>
   </div></div>
   <div class="block" id="e10-ej"><h2><span class="ico">✎</span>Ejemplo resuelto</h2><div class="example">
     <p><b>Una carga se mueve con velocidad constante \(v\) por el eje \(x\) y pasa por el origen en \(t=0\). Halla el potencial en \(t=0\) en el punto \((0,d)\).</b></p>
@@ -4686,13 +4686,13 @@ footer{color:var(--muted)}
   <p class="lead">Una carga acelerada emite energía que se aleja para siempre hacia el infinito. Eso es la <b>radiación</b>: campos que caen como \(1/r\), cuyo flujo de energía por una esfera enorme no se anula.</p>
   <div class="toc"><a href="#e11-resumen" data-scroll>Resumen</a><a href="#e11-lab" data-scroll>Visualiza</a><a href="#e11-leyes" data-scroll>Leyes</a><a href="#e11-ej" data-scroll>Ejemplo</a></div>
   <div class="block" id="e11-resumen"><h2><span class="ico">≡</span>Resumen</h2><ul class="keypoints">
-    <li><b>Qué es radiación.</b> \(\vec S\propto1/r^2\) solo si \(\vec E\) y \(\vec B\) caen como \(1/r\). Los campos de Coulomb (\(1/r^2\)) no radian; los términos de aceleración sí.</li>
-    <li><b>Dipolo eléctrico oscilante.</b> Dos cargas \(\pm q\) que oscilan, con \(p(t)=p_0\cos\omega t\). En la zona de radiación (\(d\ll\lambda\ll r\)) los campos son ondas esféricas transversales.</li>
-    <li><b>Patrón de radiación.</b> La intensidad va como \(\sin^2\theta\): nada a lo largo del eje del dipolo, máxima en el plano perpendicular (forma de "dona").</li>
-    <li><b>Dependencia con la frecuencia.</b> La potencia crece como \(\omega^4\). Por eso el cielo es azul: las moléculas del aire dispersan mucho más la luz azul que la roja.</li>
-    <li><b>Dipolo magnético.</b> Un lazo con corriente alterna radia de forma parecida, pero mucho más débil (un factor \((\omega b/c)^2\)).</li>
-    <li><b>Fórmula de Larmor.</b> Cualquier carga puntual acelerada, a baja velocidad, radia \(P=\mu_0q^2a^2/(6\pi c)\). A velocidades relativistas, la potencia crece como \(\gamma^6\) y se concentra hacia adelante.</li>
-    <li><b>Reacción de radiación.</b> Al radiar, la carga pierde energía: sufre una fuerza de frenado (Abraham-Lorentz) \(\vec F=\frac{\mu_0q^2}{6\pi c}\dot{\vec a}\).</li>
+    <li><a class="kw" href="#t-larmor"><b>Qué es radiación.</b></a> \(\vec S\propto1/r^2\) solo si \(\vec E\) y \(\vec B\) caen como \(1/r\). Los campos de Coulomb (\(1/r^2\)) no radian; los términos de aceleración sí.</li>
+    <li><a class="kw" href="#t-larmor"><b>Dipolo eléctrico oscilante.</b></a> Dos cargas \(\pm q\) que oscilan, con \(p(t)=p_0\cos\omega t\). En la zona de radiación (\(d\ll\lambda\ll r\)) los campos son ondas esféricas transversales.</li>
+    <li><a class="kw" href="#t-larmor"><b>Patrón de radiación.</b></a> La intensidad va como \(\sin^2\theta\): nada a lo largo del eje del dipolo, máxima en el plano perpendicular (forma de "dona").</li>
+    <li><a class="kw" href="#t-larmor"><b>Dependencia con la frecuencia.</b></a> La potencia crece como \(\omega^4\). Por eso el cielo es azul: las moléculas del aire dispersan mucho más la luz azul que la roja.</li>
+    <li><a class="kw" href="#t-dipolo-magnetico"><b>Dipolo magnético.</b></a> Un lazo con corriente alterna radia de forma parecida, pero mucho más débil (un factor \((\omega b/c)^2\)).</li>
+    <li><a class="kw" href="#t-larmor"><b>Fórmula de Larmor.</b></a> Cualquier carga puntual acelerada, a baja velocidad, radia \(P=\mu_0q^2a^2/(6\pi c)\). A velocidades relativistas, la potencia crece como \(\gamma^6\) y se concentra hacia adelante.</li>
+    <li><a class="kw" href="#t-larmor"><b>Reacción de radiación.</b></a> Al radiar, la carga pierde energía: sufre una fuerza de frenado (Abraham-Lorentz) \(\vec F=\frac{\mu_0q^2}{6\pi c}\dot{\vec a}\).</li>
   </ul></div>
   <div class="block" id="e11-lab"><h2><span class="ico">◎</span>Visualiza</h2>
     <div class="tabs" id="e11-tabs"><button data-t="dip" class="on">Campo de un dipolo oscilante</button><button data-t="pat">Patrón de Larmor / Liénard</button></div>
@@ -4713,11 +4713,11 @@ footer{color:var(--muted)}
     </div></div></div>
   </div>
   <div class="block" id="e11-leyes"><h2><span class="ico">§</span>Leyes</h2><div class="laws">
-    <div class="law"><h3>Campos del dipolo eléctrico</h3><div class="eq">\[ \vec E=-\frac{\mu_0p_0\omega^2}{4\pi}\frac{\sin\theta}{r}\cos\!\left[\omega\!\left(t-\tfrac rc\right)\right]\hat\theta \qquad \vec B=\frac{E}{c}\,\hat\phi \]</div><p>En la zona de radiación.</p></div>
-    <div class="law"><h3>Intensidad y potencia del dipolo</h3><div class="eq">\[ \langle S\rangle=\frac{\mu_0p_0^2\omega^4}{32\pi^2c}\frac{\sin^2\theta}{r^2} \qquad \langle P\rangle=\frac{\mu_0p_0^2\omega^4}{12\pi c} \]</div><p>La potencia total no depende de \(r\): la energía se escapa al infinito.</p></div>
-    <div class="law"><h3>Fórmula de Larmor</h3><div class="eq">\[ P=\frac{\mu_0q^2a^2}{6\pi c} \qquad \frac{dP}{d\Omega}=\frac{\mu_0q^2a^2}{16\pi^2c}\sin^2\theta \]</div><p>Válida si \(v\ll c\).</p></div>
-    <div class="law"><h3>Generalización de Liénard</h3><div class="eq">\[ P=\frac{\mu_0q^2\gamma^6}{6\pi c}\left(a^2-\left|\frac{\vec v\times\vec a}{c}\right|^2\right) \]</div><p>Si \(\vec a\parallel\vec v\): \(\dfrac{dP}{d\Omega}\propto\dfrac{\sin^2\theta}{(1-\beta\cos\theta)^5}\).</p></div>
-    <div class="law"><h3>Abraham-Lorentz</h3><div class="eq">\[ \vec F_{rad}=\frac{\mu_0q^2}{6\pi c}\,\dot{\vec a} \]</div><p>Fuerza de reacción de radiación; tiene problemas conceptuales (soluciones "desbocadas").</p></div>
+    <div class="law"><h3><a class="kw" href="#t-larmor">Campos del dipolo eléctrico</a></h3><div class="eq">\[ \vec E=-\frac{\mu_0p_0\omega^2}{4\pi}\frac{\sin\theta}{r}\cos\!\left[\omega\!\left(t-\tfrac rc\right)\right]\hat\theta \qquad \vec B=\frac{E}{c}\,\hat\phi \]</div><p>En la zona de radiación.</p></div>
+    <div class="law"><h3><a class="kw" href="#t-larmor">Intensidad y potencia del dipolo</a></h3><div class="eq">\[ \langle S\rangle=\frac{\mu_0p_0^2\omega^4}{32\pi^2c}\frac{\sin^2\theta}{r^2} \qquad \langle P\rangle=\frac{\mu_0p_0^2\omega^4}{12\pi c} \]</div><p>La potencia total no depende de \(r\): la energía se escapa al infinito.</p></div>
+    <div class="law"><h3><a class="kw" href="#t-larmor">Fórmula de Larmor</a></h3><div class="eq">\[ P=\frac{\mu_0q^2a^2}{6\pi c} \qquad \frac{dP}{d\Omega}=\frac{\mu_0q^2a^2}{16\pi^2c}\sin^2\theta \]</div><p>Válida si \(v\ll c\).</p></div>
+    <div class="law"><h3><a class="kw" href="#t-larmor">Generalización de Liénard</a></h3><div class="eq">\[ P=\frac{\mu_0q^2\gamma^6}{6\pi c}\left(a^2-\left|\frac{\vec v\times\vec a}{c}\right|^2\right) \]</div><p>Si \(\vec a\parallel\vec v\): \(\dfrac{dP}{d\Omega}\propto\dfrac{\sin^2\theta}{(1-\beta\cos\theta)^5}\).</p></div>
+    <div class="law"><h3><a class="kw" href="#t-larmor">Abraham-Lorentz</a></h3><div class="eq">\[ \vec F_{rad}=\frac{\mu_0q^2}{6\pi c}\,\dot{\vec a} \]</div><p>Fuerza de reacción de radiación; tiene problemas conceptuales (soluciones "desbocadas").</p></div>
   </div></div>
   <div class="block" id="e11-ej"><h2><span class="ico">✎</span>Ejemplo resuelto</h2><div class="example">
     <p><b>¿Cuántas veces más se dispersa la luz azul (450 nm) que la roja (700 nm) en el aire?</b></p>
@@ -4738,13 +4738,13 @@ footer{color:var(--muted)}
   <p class="lead">El electromagnetismo ya era relativista antes de Einstein. Lo que un observador llama campo eléctrico, otro lo ve en parte como magnético: \(\vec E\) y \(\vec B\) son dos caras de un mismo <b>tensor de campo</b>.</p>
   <div class="toc"><a href="#e12-resumen" data-scroll>Resumen</a><a href="#e12-lab" data-scroll>Visualiza</a><a href="#e12-leyes" data-scroll>Leyes</a><a href="#e12-ej" data-scroll>Ejemplo</a></div>
   <div class="block" id="e12-resumen"><h2><span class="ico">≡</span>Resumen</h2><ul class="keypoints">
-    <li><b>Postulados.</b> Las leyes de la física son iguales en todos los sistemas inerciales, y la velocidad de la luz en el vacío es la misma para todos.</li>
-    <li><b>Consecuencias.</b> La simultaneidad es relativa, los relojes en movimiento atrasan (\(\Delta t=\gamma\Delta\tau\)) y los objetos en movimiento se contraen en la dirección del movimiento (\(L=L_0/\gamma\)).</li>
-    <li><b>Transformaciones de Lorentz</b> y <b>cuadrivectores</b> \(x^\mu=(ct,x,y,z)\). El intervalo \(x_\mu x^\mu\) es invariante.</li>
-    <li><b>Mecánica relativista.</b> Cuadrimomento \(p^\mu=(E/c,\vec p)\), con \(E^2=p^2c^2+m^2c^4\). Se conservan energía y momento totales.</li>
-    <li><b>El magnetismo como efecto relativista.</b> Una carga en reposo junto a un cable neutro no siente fuerza; en el marco de la carga en movimiento, la contracción de Lorentz deja al cable cargado y aparece una fuerza eléctrica. Es la misma fuerza que en el otro marco se llama magnética.</li>
-    <li><b>Transformación de campos.</b> Las componentes paralelas a la velocidad no cambian; las perpendiculares se mezclan entre \(\vec E\) y \(\vec B\).</li>
-    <li><b>Forma tensorial.</b> \(\vec E\) y \(\vec B\) forman el tensor antisimétrico \(F^{\mu\nu}\), y las cuatro ecuaciones de Maxwell se reducen a dos.</li>
+    <li><a class="kw" href="#t-lorentz"><b>Postulados.</b></a> Las leyes de la física son iguales en todos los sistemas inerciales, y la velocidad de la luz en el vacío es la misma para todos.</li>
+    <li><a class="kw" href="#t-lorentz"><b>Consecuencias.</b></a> La simultaneidad es relativa, los relojes en movimiento atrasan (\(\Delta t=\gamma\Delta\tau\)) y los objetos en movimiento se contraen en la dirección del movimiento (\(L=L_0/\gamma\)).</li>
+    <li><a class="kw" href="#t-lorentz"><b>Transformaciones de Lorentz</b></a> y <b>cuadrivectores</b> \(x^\mu=(ct,x,y,z)\). El intervalo \(x_\mu x^\mu\) es invariante.</li>
+    <li><a class="kw" href="#t-emc2"><b>Mecánica relativista.</b></a> Cuadrimomento \(p^\mu=(E/c,\vec p)\), con \(E^2=p^2c^2+m^2c^4\). Se conservan energía y momento totales.</li>
+    <li><a class="kw" href="#t-tensor-campo"><b>El magnetismo como efecto relativista.</b></a> Una carga en reposo junto a un cable neutro no siente fuerza; en el marco de la carga en movimiento, la contracción de Lorentz deja al cable cargado y aparece una fuerza eléctrica. Es la misma fuerza que en el otro marco se llama magnética.</li>
+    <li><a class="kw" href="#t-tensor-campo"><b>Transformación de campos.</b></a> Las componentes paralelas a la velocidad no cambian; las perpendiculares se mezclan entre \(\vec E\) y \(\vec B\).</li>
+    <li><a class="kw" href="#t-tensor-campo"><b>Forma tensorial.</b></a> \(\vec E\) y \(\vec B\) forman el tensor antisimétrico \(F^{\mu\nu}\), y las cuatro ecuaciones de Maxwell se reducen a dos.</li>
   </ul></div>
   <div class="block" id="e12-lab"><h2><span class="ico">◎</span>Visualiza</h2>
     <div class="tabs" id="e12-tabs"><button data-t="lineas" class="on">Campo de una carga en movimiento</button><button data-t="transf">Transformación de E y B</button></div>
@@ -4765,11 +4765,11 @@ footer{color:var(--muted)}
     </div></div></div>
   </div>
   <div class="block" id="e12-leyes"><h2><span class="ico">§</span>Leyes</h2><div class="laws">
-    <div class="law"><h3>Transformación de Lorentz</h3><div class="eq">\[ \bar x=\gamma(x-vt) \qquad \bar t=\gamma\left(t-\frac{v}{c^2}x\right) \qquad \gamma=\frac1{\sqrt{1-v^2/c^2}} \]</div><p>\(\bar y=y\), \(\bar z=z\).</p></div>
-    <div class="law"><h3>Energía y momento</h3><div class="eq">\[ \vec p=\gamma m\vec u \qquad E=\gamma mc^2 \qquad E^2-p^2c^2=m^2c^4 \]</div><p>\(p^\mu p_\mu=-m^2c^2\) es invariante.</p></div>
-    <div class="law"><h3>Transformación de campos</h3><div class="eq">\[ \bar E_\parallel=E_\parallel \qquad \bar{\vec E}_\perp=\gamma(\vec E+\vec v\times\vec B)_\perp \]</div><div class="eq">\[ \bar B_\parallel=B_\parallel \qquad \bar{\vec B}_\perp=\gamma\left(\vec B-\tfrac1{c^2}\vec v\times\vec E\right)_\perp \]</div><p>Invariantes: \(E^2-c^2B^2\) y \(\vec E\cdot\vec B\).</p></div>
-    <div class="law"><h3>Carga en movimiento uniforme</h3><div class="eq">\[ \vec E=\frac{q}{4\pi\varepsilon_0}\frac{1-\beta^2}{\left(1-\beta^2\sin^2\theta\right)^{3/2}}\frac{\hat R}{R^2} \]</div><p>\(\vec R\) va desde la posición <b>actual</b> de la carga.</p></div>
-    <div class="law"><h3>Tensor de campo</h3><div class="eq">\[ \partial_\nu F^{\mu\nu}=\mu_0J^\mu \qquad \partial_\nu G^{\mu\nu}=0 \]</div><p>\(J^\mu=(c\rho,\vec J)\). Fuerza de Minkowski: \(K^\mu=q\,\eta_\nu F^{\mu\nu}\).</p></div>
+    <div class="law"><h3><a class="kw" href="#t-lorentz">Transformación de Lorentz</a></h3><div class="eq">\[ \bar x=\gamma(x-vt) \qquad \bar t=\gamma\left(t-\frac{v}{c^2}x\right) \qquad \gamma=\frac1{\sqrt{1-v^2/c^2}} \]</div><p>\(\bar y=y\), \(\bar z=z\).</p></div>
+    <div class="law"><h3><a class="kw" href="#t-emc2">Energía y momento</a></h3><div class="eq">\[ \vec p=\gamma m\vec u \qquad E=\gamma mc^2 \qquad E^2-p^2c^2=m^2c^4 \]</div><p>\(p^\mu p_\mu=-m^2c^2\) es invariante.</p></div>
+    <div class="law"><h3><a class="kw" href="#t-tensor-campo">Transformación de campos</a></h3><div class="eq">\[ \bar E_\parallel=E_\parallel \qquad \bar{\vec E}_\perp=\gamma(\vec E+\vec v\times\vec B)_\perp \]</div><div class="eq">\[ \bar B_\parallel=B_\parallel \qquad \bar{\vec B}_\perp=\gamma\left(\vec B-\tfrac1{c^2}\vec v\times\vec E\right)_\perp \]</div><p>Invariantes: \(E^2-c^2B^2\) y \(\vec E\cdot\vec B\).</p></div>
+    <div class="law"><h3><a class="kw" href="#t-lienard-wiechert">Carga en movimiento uniforme</a></h3><div class="eq">\[ \vec E=\frac{q}{4\pi\varepsilon_0}\frac{1-\beta^2}{\left(1-\beta^2\sin^2\theta\right)^{3/2}}\frac{\hat R}{R^2} \]</div><p>\(\vec R\) va desde la posición <b>actual</b> de la carga.</p></div>
+    <div class="law"><h3><a class="kw" href="#t-tensor-campo">Tensor de campo</a></h3><div class="eq">\[ \partial_\nu F^{\mu\nu}=\mu_0J^\mu \qquad \partial_\nu G^{\mu\nu}=0 \]</div><p>\(J^\mu=(c\rho,\vec J)\). Fuerza de Minkowski: \(K^\mu=q\,\eta_\nu F^{\mu\nu}\).</p></div>
   </div></div>
   <div class="block" id="e12-ej"><h2><span class="ico">✎</span>Ejemplo resuelto</h2><div class="example">
     <p><b>Una carga se mueve con \(\beta=0{,}9\). ¿Cuánto más intenso es su campo en la dirección perpendicular al movimiento, y cuánto menos en la dirección del movimiento, respecto al de una carga en reposo a la misma distancia?</b></p>
