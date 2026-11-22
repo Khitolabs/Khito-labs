@@ -388,6 +388,18 @@ html.kl-light .kl-ib .kl-badge{color:#fff}
 .kl-empty{margin-top:26px}
 @media (max-width:720px){.kl-tools{gap:4px}.kl-ib{width:34px;height:34px}}
 @media (max-width:560px){.brand svg{height:28px}.top .wrap{gap:8px}}
+/* ===== móvil: evitar desbordes horizontales ===== */
+html,body{overflow-x:hidden;max-width:100%}
+main.wrap{overflow-x:clip}
+.crumbs .here,.crumbs a{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.crumbs .here{flex:0 1 auto}
+mjx-container[display="true"]{display:block;max-width:100%;overflow-x:auto;overflow-y:hidden;padding:2px 0}
+mjx-container.kl-wide{display:block!important;max-width:100%;overflow-x:auto;overflow-y:hidden;margin:.35em 0;padding:2px 0;-webkit-overflow-scrolling:touch}
+.block,.law,.example,.exc,.kl-fav,.keypoints li{min-width:0;overflow-wrap:anywhere}
+.keypoints{grid-template-columns:minmax(0,1fr)}
+.law .eq,.eq{max-width:100%;overflow-x:auto;overflow-y:hidden}
+@media (max-width:640px){.block table,.law table{display:block;max-width:100%;overflow-x:auto}.block{padding:18px 14px}}
+@media (max-width:560px){.top .wrap{flex-wrap:wrap;height:auto;padding-top:8px;padding-bottom:6px;row-gap:2px}.crumbs{order:3;flex:1 0 100%;font-size:.8rem}.crumbs .hide-sm{display:none}}
 </style>
 </head>
 <body>
@@ -12849,6 +12861,27 @@ show();
   window.addEventListener('hashchange',()=>{syncStar();if(route()==='guardados')render()});
   window.addEventListener('storage',e=>{if(e.key==='kl-favs'){F=LS.get('kl-favs',[]);persist()}});
   applyTheme();applyFs();applyStill();count();render();syncStar();
+})();
+</script>
+<script>
+/* ===== móvil: fórmulas largas con desplazamiento propio ===== */
+(function(){
+  let h=null;
+  function fit(){
+    const v=document.querySelector('section.view.active')||document;
+    v.querySelectorAll('mjx-container:not([display="true"])').forEach(c=>{
+      c.classList.remove('kl-wide');
+      const box=c.parentElement&&c.parentElement.closest('li,p,td,th,div,dd,section');
+      const vw=document.documentElement.clientWidth;
+      const avail=box?Math.min(box.clientWidth,vw-Math.max(0,box.getBoundingClientRect().left)-12):vw;
+      if(c.getBoundingClientRect().width>avail-4)c.classList.add('kl-wide');
+    });
+  }
+  const later=()=>{clearTimeout(h);h=setTimeout(fit,120)};
+  new MutationObserver(ms=>{for(const m of ms)for(const n of m.addedNodes)if(n.nodeType===1&&(n.tagName==='MJX-CONTAINER'||n.querySelector&&n.querySelector('mjx-container'))){later();return}})
+    .observe(document.body,{childList:true,subtree:true});
+  window.addEventListener('resize',later);window.addEventListener('hashchange',later);
+  window.KL_FIT_MATH=fit;
 })();
 </script>
 </body>
