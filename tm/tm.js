@@ -427,15 +427,19 @@ res:[
 [R`Máquina térmica.`,R`Opera en ciclos entre un foco caliente \(T_h\) y uno frío \(T_c\). Absorbe \(Q_h\), cede \(Q_c\) y entrega \(W = Q_h - Q_c\). Su rendimiento es \(\eta = W/Q_h = 1 - Q_c/Q_h\).`],
 [R`Enunciados de la segunda ley.`,R`<i>Kelvin-Planck:</i> ningún ciclo tiene como único efecto extraer calor de un foco y convertirlo íntegramente en trabajo. <i>Clausius:</i> ningún ciclo tiene como único efecto pasar calor de un cuerpo frío a uno caliente. Si se viola uno, se puede construir una máquina que viola el otro, así que son equivalentes.`],
 [R`Teorema de Carnot.`,R`Ninguna máquina entre dos focos supera a una reversible, y todas las reversibles tienen el mismo rendimiento. La demostración acopla una máquina hipotéticamente mejor con una reversible funcionando como refrigerador y obtiene una violación de Clausius.`],
+[R`Balance de entropía de una máquina.`,R`En cada ciclo la sustancia de trabajo vuelve a su estado, así que solo cambian los focos: \(\Delta S_\text{univ} = -\dfrac{Q_h}{T_h} + \dfrac{Q_c}{T_c}\). La segunda ley exige \(\Delta S_\text{univ}\ge0\), es decir \(\dfrac{Q_c}{Q_h}\ge\dfrac{T_c}{T_h}\), que es lo mismo que \(\eta\le1-\dfrac{T_c}{T_h}\). La igualdad corresponde a la máquina reversible, y el trabajo que se pierde es \(W_\text{perdido} = T_c\,\Delta S_\text{univ}\).`],
 [R`Ciclo de Carnot.`,R`Dos isotermas y dos adiabáticas reversibles. Para un gas ideal, las adiabáticas imponen \(V_3/V_2 = V_4/V_1\), y entonces \(Q_c/Q_h = T_c/T_h\). En el diagrama \(T\)–\(S\) el ciclo es un rectángulo.`],
 [R`Temperatura termodinámica.`,R`Como el rendimiento reversible no depende de la sustancia, Kelvin definió la temperatura absoluta mediante \(Q_c/Q_h = T_c/T_h\). Coincide con la del termómetro de gas ideal.`],
 [R`Refrigeradores y bombas de calor.`,R`Recorren el ciclo al revés. Coeficientes de operación: \(\text{COP}_R = Q_c/W \le \dfrac{T_c}{T_h-T_c}\) y \(\text{COP}_{BC} = Q_h/W \le \dfrac{T_h}{T_h-T_c}\). Pueden ser mayores que 1.`],
 [R`Ciclos reales.`,R`El ciclo Otto (gasolina) tiene dos adiabáticas y dos isocóricas: \(\eta = 1 - r^{1-\gamma}\), con \(r\) la razón de compresión. Absorbe calor a temperaturas variables, por eso rinde menos que Carnot entre sus temperaturas extremas.`]],
-lab:PANE('ms04-cv',[G('ms04-c','c',[['carnot','Carnot'],['otto','Otto']]),S('ms04-th','T<sub>h</sub> (K)',400,1500,10,800),S('ms04-tc','T<sub>c</sub> (K)',200,600,10,300),S('ms04-r','r (Otto)',2,12,0.5,8)],'ms04-read',
- R`1 mol de aire (\(\gamma = 1{,}4\)). A la izquierda, el ciclo en el plano \(P\)–\(V\) en escala log-log, donde isotermas y adiabáticas son rectas de pendiente \(-1\) y \(-\gamma\); a la derecha, el mismo ciclo en \(T\)–\(S\), donde el área encerrada es el trabajo neto. Rojo: absorbe calor. Azul: cede calor. En el ciclo Otto, \(T_h\) es la temperatura máxima tras la combustión y \(T_c\) la de admisión.`),
+lab:PANE('ms04-cv',[G('ms04-c','c',[['carnot','Carnot'],['otto','Otto']]),S('ms04-th','T<sub>h</sub> (K)',400,1500,10,800),S('ms04-tc','T<sub>c</sub> (K)',200,600,10,300),S('ms04-r','r (Otto)',2,12,0.5,8),S('ms04-x','Máquina real: η/η<sub>C</sub>',0.2,1.3,0.01,0.7)],'ms04-read',
+ R`1 mol de aire (\(\gamma = 1{,}4\)). A la izquierda, el ciclo en el plano \(P\)–\(V\) en escala log-log, donde isotermas y adiabáticas son rectas de pendiente \(-1\) y \(-\gamma\); a la derecha, el mismo ciclo en \(T\)–\(S\), donde el área encerrada es el trabajo neto. Rojo: absorbe calor. Azul: cede calor. El panel de lecturas hace el balance de la segunda ley: la entropía que gana el universo en cada ciclo. Con el control "máquina real" puedes proponer una máquina entre los mismos focos con un rendimiento dado: si supera al de Carnot, el universo perdería entropía y la segunda ley la prohíbe. En el ciclo Otto, \(T_h\) es la temperatura máxima tras la combustión y \(T_c\) la de admisión.`),
 laws:[
-['Rendimiento',R`\eta = \frac{W}{Q_h} = 1-\frac{Q_c}{Q_h}`,'Primera ley aplicada a un ciclo: W = Q_h − Q_c.'],
-['Carnot',R`\eta_C = 1-\frac{T_c}{T_h}`,'Cota superior para cualquier máquina entre dos focos.'],
+['Segunda ley (Kelvin-Planck)',R`\text{ciclo en contacto con un solo foco:}\quad W\le0`,'Es imposible convertir íntegramente en trabajo el calor de un solo foco. Toda máquina necesita ceder calor a un foco frío: Q<sub>c</sub> &gt; 0.'],
+['Segunda ley (Clausius)',R`\text{ciclo con }W=0:\quad Q_{\,\text{frío}\to\text{caliente}}\le0`,'El calor no pasa espontáneamente de un cuerpo frío a uno caliente: un refrigerador siempre consume trabajo.'],
+['Rendimiento',R`\eta = \frac{W}{Q_h} = 1-\frac{Q_c}{Q_h}`,'La primera ley da W = Q<sub>h</sub> − Q<sub>c</sub>; la segunda ley limita cuánto puede valer η.'],
+['Teorema de Carnot',R`\eta\le\eta_\text{rev}=1-\frac{T_c}{T_h}`,'Igualdad solo para máquinas reversibles; todas las reversibles entre los mismos focos rinden igual.'],
+['Balance de entropía',R`\Delta S_\text{univ} = \frac{Q_c}{T_c}-\frac{Q_h}{T_h}\ge0`,R`Equivale al teorema de Carnot. Trabajo perdido: \(W_\text{perdido} = T_c\,\Delta S_\text{univ}\).`],
 ['Refrigerador y bomba de calor',[R`\text{COP}_R\le\frac{T_c}{T_h-T_c}`,R`\text{COP}_{BC}\le\frac{T_h}{T_h-T_c}`]],
 ['Otto',R`\eta_\text{Otto} = 1 - \frac{1}{r^{\gamma-1}}`,R`\(r = V_\text{máx}/V_\text{mín}\). Con \(r = 8\) y \(\gamma = 1{,}4\): \(\eta = 56\%\).`],
 ['Escala termodinámica',R`\frac{Q_c}{Q_h}\Big|_\text{rev} = \frac{T_c}{T_h}`,'Define T sin referirse a ninguna sustancia.']],
@@ -449,7 +453,7 @@ ref:'Zemansky & Dittman, cap. 6–7; Callen, cap. 4; Fermi, <i>Thermodynamics</i
 LABS['tme-carnot']=function(sec){
   const cv=$('#ms04-cv',sec),rd=$('#ms04-read',sec);let cy='carnot',s=0;
   const g=1.4,R0=8.314,cvm=R0/(g-1);
-  const gth=sl(sec,'ms04-th',v=>v+' K',()=>draw()),gtc=sl(sec,'ms04-tc',v=>v+' K',()=>draw()),gr=sl(sec,'ms04-r',v=>nf(v,1),()=>draw());
+  const gth=sl(sec,'ms04-th',v=>v+' K',()=>draw()),gtc=sl(sec,'ms04-tc',v=>v+' K',()=>draw()),gr=sl(sec,'ms04-r',v=>nf(v,1),()=>draw()),gx=sl(sec,'ms04-x',v=>nf(100*v,0)+' %',()=>draw());
   segm(sec,'ms04-c','c',v=>{cy=v;draw();});
   function cycle(){
     const Th=gth(),Tc=Math.min(gtc(),Th-20),N=60,legs=[];
@@ -483,11 +487,20 @@ LABS['tme-carnot']=function(sec){
     dot(ctx,A.X(lg(q[0])),A.Y(lg(q[1])),7,K.f,'#fff');dot(ctx,B.X(S(q[0],q[2])),B.Y(q[2]),7,K.f,'#fff');
     ['1','2','3','4'].forEach((t,i)=>{const p=C.legs[i].p[0];label(ctx,t,A.X(lg(p[0]))+8,A.Y(lg(p[1]))-10,K.ink,'left','middle','700 12px Inter');label(ctx,t,B.X(S(p[0],p[2]))+8,B.Y(p[2])-10,K.ink,'left','middle','700 12px Inter');});
     const Qh=C.legs.reduce((a,l)=>a+Math.max(0,l.q),0),Qc=-C.legs.reduce((a,l)=>a+Math.min(0,l.q),0),W=Qh-Qc,eta=W/Qh,ec=1-C.Tc/C.Th;
+    /* ∮δQ/T del gas: suma sobre los tramos con la temperatura del propio gas */
+    let clau=0;C.legs.forEach(l=>{if(!l.q)return;const p=l.p;for(let i=1;i<p.length;i++){const Tm=(p[i][2]+p[i-1][2])/2,dQ=l.q/(p.length-1);clau+=dQ/Tm;}});
+    const dSu=Qc/C.Tc-Qh/C.Th,ex=gx()*ec,dSr=1000*(1-ex)/C.Tc-1000/C.Th;
     rd.innerHTML=row('Q<sub>h</sub> absorbido',nf(Qh,0)+' J')+row('Q<sub>c</sub> cedido',nf(Qc,0)+' J')+row('W = Q<sub>h</sub> − Q<sub>c</sub>',nf(W,0)+' J')+sep+
       row('η del ciclo',nf(100*eta,1)+' %')+row('η de Carnot entre '+nf(C.Tc,0)+' K y '+nf(C.Th,0)+' K',nf(100*ec,1)+' %')+
       (cy==='carnot'?row('Q<sub>c</sub>/Q<sub>h</sub> = T<sub>c</sub>/T<sub>h</sub>',nf(Qc/Qh,4)+' = '+nf(C.Tc/C.Th,4))+row('COP refrigerador (al revés)',nf(C.Tc/(C.Th-C.Tc),2))
         :row('T tras compresión (2)',nf(C.T2,0)+' K')+row('T de escape (4)',nf(C.T4,0)+' K')+row('1 − r<sup>1−γ</sup>',nf(100*(1-Math.pow(gr(),1-g)),1)+' %')+
-         rowT(C.ok?'El Otto absorbe calor entre T₂ y T<sub>h</sub>, no siempre a T<sub>h</sub>: por eso η &lt; η<sub>Carnot</sub>.':'T<sub>h</sub> es menor que la temperatura tras la compresión: se ajustó para que el ciclo exista.'));
+         rowT(C.ok?'El Otto absorbe calor entre T₂ y T<sub>h</sub>, no siempre a T<sub>h</sub>: por eso η &lt; η<sub>Carnot</sub>.':'T<sub>h</sub> es menor que la temperatura tras la compresión: se ajustó para que el ciclo exista.'))+
+      sep+'<div style="font-weight:700;margin:2px 0 4px">Segunda ley</div>'+row('∮ δQ/T del gas',nf(clau,3)+' J/K')+
+      row('ΔS<sub>univ</sub> = Q<sub>c</sub>/T<sub>c</sub> − Q<sub>h</sub>/T<sub>h</sub> (focos)',nf(dSu,2)+' J/K')+row('trabajo perdido T<sub>c</sub>ΔS<sub>univ</sub>',nf(C.Tc*dSu,0)+' J')+
+      rowT(cy==='carnot'?'Carnot es reversible: el gas y los focos intercambian calor a la misma temperatura, así que ΔS<sub>univ</sub> = 0 y ningún trabajo se desperdicia.':'El gas recorre un ciclo reversible (∮δQ/T = 0), pero si el calor viene de un foco a T<sub>h</sub> y va a uno a T<sub>c</sub>, cada intercambio ocurre con diferencia de temperatura y el universo gana entropía.')+
+      sep+'<div style="font-weight:700;margin:2px 0 4px">Máquina real entre los mismos focos (Q<sub>h</sub> = 1000 J)</div>'+row('η propuesta',nf(100*ex,1)+' %')+row('W',nf(1000*ex,0)+' J')+row('Q<sub>c</sub>',nf(1000*(1-ex),0)+' J')+
+      `<div><span class="k">ΔS<sub>univ</sub></span> = <b style="color:${dSr<-1e-9?'#e03131':'inherit'}">${nf(dSr,3)} J/K</b></div>`+
+      rowT(dSr<-1e-9?'Imposible: el universo perdería entropía. Acoplada a un Carnot funcionando al revés, esta máquina pasaría calor del foco frío al caliente sin gastar trabajo (viola Clausius).':Math.abs(dSr)<1e-6?'Límite reversible: ΔS<sub>univ</sub> = 0. Es la máquina de Carnot.':'Permitida: ΔS<sub>univ</sub> &gt; 0. Respecto de Carnot se pierden '+nf(C.Tc*dSr,0)+' J por cada 1000 J absorbidos.');
   }
   return {draw,tick(dt){if(!vis(cv))return;s=(s+dt/6)%1;draw();}};
 };
@@ -501,7 +514,7 @@ res:[
 [R`Procesos irreversibles.`,R`Para cualquier proceso, \(dS \ge \delta Q/T\). En un sistema aislado (\(\delta Q = 0\)), \(\Delta S \ge 0\): la entropía nunca disminuye y el equilibrio es el estado de entropía máxima.`],
 [R`Relación fundamental.`,R`Combinando la primera ley con \(\delta Q_\text{rev} = T\,dS\): \(dU = T\,dS - P\,dV\). Relaciona solo funciones de estado, así que vale para cualquier proceso entre estados de equilibrio.`],
 [R`Gas ideal.`,R`\(\Delta S = nc_V\ln\dfrac{T_2}{T_1} + nR\ln\dfrac{V_2}{V_1}\). En la expansión libre al doble de volumen, \(Q = 0\) pero \(\Delta S = nR\ln2 > 0\): para calcularlo hay que usar un camino reversible entre los mismos estados.`],
-[R`Conducción de calor.`,R`Si dos cuerpos con \(C\) igual a \(T_1\) y \(T_2\) llegan a \(T_f = (T_1+T_2)/2\), \(\Delta S = C\ln\dfrac{T_f^2}{T_1T_2} \ge 0\), porque la media aritmética es mayor o igual que la geométrica. La tasa de producción es \(\dot S = \dot Q\left(\dfrac1{T_c} - \dfrac1{T_h}\right) \ge 0\).`],
+[R`Conducción de calor.`,R`Si dos cuerpos con la misma capacidad calorífica \(C\), a temperaturas \(T_1\) y \(T_2\), se ponen en contacto, llegan a \(T_f = (T_1+T_2)/2\) y, \(\Delta S = C\ln\dfrac{T_f^2}{T_1T_2} \ge 0\), porque la media aritmética es mayor o igual que la geométrica. La tasa de producción es \(\dot S = \dot Q\left(\dfrac1{T_c} - \dfrac1{T_h}\right) \ge 0\).`],
 [R`Trabajo perdido.`,R`La irreversibilidad desperdicia trabajo: \(W_\text{perdido} = T_0\,\Delta S_\text{univ}\), con \(T_0\) la temperatura del ambiente.`]],
 lab:PANE('ms05-cv',[S('ms05-t1','T₁ (K)',250,600,5,500),S('ms05-t2','T₂ (K)',100,500,5,200),S('ms05-c','C₂/C₁',0.2,5,0.1,1),B('ms05-go','Poner en contacto',false)],'ms05-read',
  R`Dos cuerpos con capacidades \(C_1 = 1\) kJ/K y \(C_2\) se ponen en contacto por una pared diatérmica (ley de enfriamiento de Newton). Arriba, las temperaturas tienden a \(T_f\). Abajo, la entropía de cada cuerpo y la total: la del cuerpo caliente baja, la del frío sube más, y la total solo puede crecer.`),
