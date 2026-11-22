@@ -38,7 +38,7 @@ const TAU=Math.PI*2;
 .aa-sel{font:500 .9rem Inter,sans-serif;border:1px solid var(--line);border-radius:10px;padding:7px 10px;background:var(--kl-raise);color:var(--ink);max-width:100%}
 .view.theme-aa .controls .slider input{width:96px}
 .view.theme-aa .controls .slider b{min-width:40px}
-.aa-ok{color:#3FD27A;font-weight:700}.aa-no{color:#F05D62;font-weight:700}
+.aa-ok{color:var(--kl-c-green);font-weight:700}.aa-no{color:var(--kl-c-red);font-weight:700}
 #ag-lab .slider input{width:74px}
 #ag-lab .controls .slider b{min-width:34px}
 `;document.head.appendChild(st);}
@@ -385,7 +385,7 @@ V.push(String.raw`
             <label class="slider">b₁ <input type="range" id="ag-b1" min="-6" max="6" step="0.5" value="3"><b></b></label>
           </div>
           <div class="controls">
-            <span style="font-size:.88rem;font-weight:600;color:#F0903C">Ecuación 2</span>
+            <span style="font-size:.88rem;font-weight:600;color:var(--kl-c-orange)">Ecuación 2</span>
             <label class="slider">a₂₁ <input type="range" id="ag-a21" min="-4" max="4" step="0.5" value="1"><b></b></label>
             <label class="slider">a₂₂ <input type="range" id="ag-a22" min="-4" max="4" step="0.5" value="-1"><b></b></label>
             <label class="slider">b₂ <input type="range" id="ag-b2" min="-6" max="6" step="0.5" value="1"><b></b></label>
@@ -677,7 +677,7 @@ LABS['al-gauss']=function(sec){
       arrow(ctx,O[0],O[1],P.X(c),P.Y(f),K.ink,3.5);label(ctx,'b',P.X(c)+8,P.Y(f)-10,K.ink);
     }
     const cls=!ok?'incompatible: no hay solución':uni?'compatible determinado: solución única':rA===0?'0 = 0: todo el plano es solución':'compatible indeterminado: infinitas soluciones';
-    rd.innerHTML=rowT('<b style="color:#2DD4BF">'+eqTxt(a,b,c)+'</b>')+rowT('<b style="color:#F0903C">'+eqTxt(d,e,f)+'</b>')+sep+
+    rd.innerHTML=rowT('<b style="color:var(--kl-c-teal)">'+eqTxt(a,b,c)+'</b>')+rowT('<b style="color:var(--kl-c-orange)">'+eqTxt(d,e,f)+'</b>')+sep+
       row('det A','a₁₁a₂₂ − a₁₂a₂₁ = '+nt(D,3))+row('rg A',rA)+row('rg [A | b]',rAb)+sep+
       rowT('Rouché-Frobenius: '+cls)+
       (uni?row('x',nt(x,3))+row('y',nt(y,3)):'')+
@@ -784,7 +784,7 @@ LABS['al-matrices']=function(sec){
     dot(ctx,P.X(e1[0]),P.Y(e1[1]),7,'#fff',K.b);dot(ctx,P.X(e2[0]),P.Y(e2[1]),7,'#fff',K.a);
     label(ctx,'Ae₁',P.X(e1[0])+10,P.Y(e1[1])+14,K.b);label(ctx,'Ae₂',P.X(e2[0])+10,P.Y(e2[1])-14,K.a);
     const D=det2(A[0][0],A[0][1],A[1][0],A[1][1]);
-    const inv=Math.abs(D)>ZERO?mat([[A[1][1]/D,-A[0][1]/D],[-A[1][0]/D,A[0][0]/D]]):'<span style="color:#F05D62">no existe</span>';
+    const inv=Math.abs(D)>ZERO?mat([[A[1][1]/D,-A[0][1]/D],[-A[1][0]/D,A[0][0]/D]]):'<span style="color:var(--kl-c-red)">no existe</span>';
     rd.innerHTML=row('A',mat(A))+row('Ae₁ (columna 1)',`(${nt(e1[0])}, ${nt(e1[1])})`)+row('Ae₂ (columna 2)',`(${nt(e2[0])}, ${nt(e2[1])})`)+sep+
       row('det A',nt(D,3))+row('A⁻¹',inv)+sep+
       rowT(Math.abs(D)<ZERO?'det A = 0: las columnas son paralelas y el plano se aplasta sobre una recta (o un punto). Distintos x tienen la misma imagen, así que no se puede deshacer.':
@@ -810,7 +810,7 @@ LABS['al-matrices']=function(sec){
     label(ctx,'AB: primero B, luego A',10,16,K.b);label(ctx,'BA: primero A, luego B',w/2+14,16,K.t);
     const same=eqM(AB,BA);
     rd2.innerHTML=row('A',mat(Am))+row('B',mat(Bm))+sep+row('AB',mat(AB))+row('BA',mat(BA))+sep+
-      rowT(same?'<b style="color:#3FD27A">AB = BA</b>: estas dos transformaciones conmutan.':'<b style="color:#F05D62">AB ≠ BA</b>: el orden de composición importa.')+
+      rowT(same?'<b style="color:var(--kl-c-green)">AB = BA</b>: estas dos transformaciones conmutan.':'<b style="color:var(--kl-c-red)">AB ≠ BA</b>: el orden de composición importa.')+
       rowT(`En cualquier caso det(AB) = det(BA) = det A · det B = ${nt(det2(AB[0][0],AB[0][1],AB[1][0],AB[1][1]),3)}.`);
   }
   return {draw(){draw1();draw2();}};
