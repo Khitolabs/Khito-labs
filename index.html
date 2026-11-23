@@ -12908,7 +12908,7 @@ var R=[
 ['reto','explicar el patrón de un electrón que pasa <b>por dos rendijas a la vez</b>.','fm-doble-rendija','Doble rendija'],
 ['pregunta','¿Cómo supo Newton que la Luna <b>cae</b> igual que la manzana? F = GMm/r².','gravitacion','Gravitación'],
 ['pregunta','¿Por qué la luz se abre al pasar por una rendija? I(θ) = I₀ (sen β / β)².','op-fraunhofer','Difracción de Fraunhofer'],
-['reto','descomponer una onda cuadrada en senos con la <b>serie de Fourier</b>.','ed-fourier','Series de Fourier'],
+['reto','descomponer una onda cuadrada en senos con la <b>serie de Fourier</b>.','c3-fourier','Series de Fourier'],
 ['reto','obtener F = ma desde el <b>principio de mínima acción</b> δ∫L dt = 0.','mc-lagrange','Lagrange y Hamilton'],
 ['pregunta','¿Por qué un reloj en movimiento <b>atrasa</b>? Δt = γ Δτ.','fm-lorentz','Transformaciones de Lorentz'],
 ['pregunta','¿Por qué <b>lím sen x / x = 1</b> cuando x → 0?','limites-notables','Límites notables'],
@@ -12930,17 +12930,29 @@ var R=[
 ['pregunta','¿Por qué unas gafas polarizadas eliminan reflejos? Ley de Malus I = I₀ cos²θ.','op-polarizacion','Polarización']
 ];
 function rnd(seed){return function(){seed|=0;seed=seed+0x6D2B79F5|0;var t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
-var d=new Date(),day=Math.floor(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())/864e5);
+/* el reto cambia cada día a las 12:05 a. m. (hora local del visitante) */
+var CAMBIO=5*60000, svg=box.querySelector('svg'), svg0=svg?svg.innerHTML:'', sp=box.querySelector('span'), last=null;
+function hoy(){var d=new Date(Date.now()-CAMBIO);return Math.floor(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())/864e5)}
+function pinta(){
+var day=hoy(); if(day===last)return; last=day;
 /* orden barajado fijo, recorrido por ciclos para no repetir hasta agotar la lista */
 var cyc=Math.floor(day/R.length),r=rnd(7919*cyc+13),idx=R.map(function(_,k){return k});
 for(var k=idx.length-1;k>0;k--){var m=Math.floor(r()*(k+1)),t=idx[k];idx[k]=idx[m];idx[m]=t}
 var c=R[idx[day%R.length]],pr=rnd(Math.floor(day/2)*7+3);pr();pr();var asa=((pr()<0.5?0:1)^(day%2))===1;
 var name=asa?'Asa':'Yoru',col=asa?'#F7A43A':'#8EC1FC';
-var svg=box.querySelector('svg');
-if(svg){svg.innerHTML=svg.innerHTML.replace(/#8EC1FC/gi,col).replace(/<title>[^<]*<\/title>/,'<title>'+name+'</title>');}
-if(asa)box.classList.add('asa');
-var sp=box.querySelector('span');
+if(svg){svg.innerHTML=svg0.replace(/#8EC1FC/gi,col).replace(/<title>[^<]*<\/title>/,'<title>'+name+'</title>');}
+box.classList.toggle('asa',asa);
 sp.innerHTML='<span class="kl-reto-tag">'+(c[0]==='reto'?'Reto del día · '+name:'Pregunta del día · '+name)+'</span>'+(c[0]==='reto'?name+' te reta: ':name+' pregunta: ')+c[1]+' <a href="#'+c[2]+'">'+c[3]+' →</a>';
+}
+function programa(){
+var n=new Date(),p=new Date(n.getFullYear(),n.getMonth(),n.getDate(),0,5,0,0);
+if(p<=n)p.setDate(p.getDate()+1);
+setTimeout(function(){pinta();programa()},Math.min(p-n+1000,2147483000));
+}
+pinta();programa();
+/* si la pestaña estuvo dormida (celular, laptop cerrada), revisa al volver */
+document.addEventListener('visibilitychange',function(){if(!document.hidden)pinta()});
+window.addEventListener('focus',pinta);
 })();
 </script>
 </body>
