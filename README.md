@@ -7,3 +7,4 @@ Publicada con GitHub Pages: https://khitolabs.github.io/Khito-labs/
 - `index.html`: la página (vistas por `#tema`).
 - `aa/`, `c3/`, `dn/`, `ed/`, `ej/`, `fm/`, `np/`, `op/`, `te/`, `tm/`: módulos de cursos, laboratorios y ejercicios.
 - `marca/`: logos y mascotas (Yoru y Asa).
+- `herramientas/buzon-apps-script.gs`: código del buzón de sugerencias (Google Apps Script).

@@ -403,6 +403,69 @@ mjx-container.kl-wide{display:block!important;max-width:100%;overflow-x:auto;ove
 .law .eq,.eq{max-width:100%;overflow-x:auto;overflow-y:hidden}
 @media (max-width:640px){.block table,.law table{display:block;max-width:100%;overflow-x:auto}.block{padding:18px 14px}}
 @media (max-width:560px){.top .wrap{flex-wrap:wrap;height:auto;padding-top:8px;padding-bottom:6px;row-gap:2px}.crumbs{order:3;flex:1 0 100%;font-size:.8rem}.crumbs .hide-sm{display:none}}
+/* ===== Temario y prerrequisitos ===== */
+.kl-tp{margin-top:18px;margin-bottom:8px}
+.kl-tp .kl-tp-h{font-family:"JetBrains Mono",monospace;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--kl-yellow);margin:0 0 8px;font-weight:600}
+.kl-tp-pre p{margin:0 0 10px;color:var(--muted)}
+.kl-pre{list-style:none;margin:0 0 18px;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.kl-pre li{border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:var(--kl-soft);min-width:0}
+.kl-pre a{display:flex;align-items:center;gap:8px;flex-wrap:wrap;text-decoration:none;color:var(--ink)}
+.kl-pre a:hover b{text-decoration:underline}
+.kl-pre small{display:block;color:var(--muted);font-size:.84rem;margin-top:4px;line-height:1.4}
+.kl-pre-k{font:600 .68rem/1 "JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.05em;padding:4px 7px;border-radius:99px;border:1px solid currentColor}
+.kl-pre-k.kl-n{color:var(--kl-c-amber)}.kl-pre-k.kl-p{color:var(--fis)}.kl-pre-k.kl-r{color:var(--muted)}
+.kl-units{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px 22px}
+.kl-unit{min-width:0}
+.kl-unit h3{font-size:.95rem;margin:0 0 6px;color:var(--ink)}
+.kl-unit ol{margin:0;padding-left:1.25em;color:var(--muted);font-size:.9rem;line-height:1.45}
+.kl-unit li{margin:2px 0}
+.kl-unit a{color:var(--muted);text-decoration:none}
+.kl-unit a:hover{color:var(--fis);text-decoration:underline}
+.kl-tp-more{margin-top:16px;border-top:1px solid var(--line);padding-top:12px}
+.kl-tp-more summary{cursor:pointer;font-weight:600;color:var(--fis)}
+.kl-tp-more ul{margin-top:12px}
+/* ===== Buzón ===== */
+.kl-buzon{margin-top:56px;padding-top:34px;border-top:1px solid var(--line)}
+.kl-buzon>h2{font-size:clamp(1.5rem,2.6vw,2rem);margin:0 0 .3em}
+.kl-bz-form{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:18px}
+.kl-bz-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:12px}
+.kl-bz-form label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:.9rem;color:var(--ink)}
+.kl-bz-form label em{font-style:normal;font-weight:400;color:var(--muted)}
+.kl-bz-form input,.kl-bz-form select,.kl-bz-form textarea,.kl-bz-adm textarea,#kl-bz-admin-form input{font:inherit;font-weight:400;color:var(--ink);background:var(--kl-soft);border:1px solid var(--line);border-radius:10px;padding:9px 11px;width:100%;box-sizing:border-box}
+.kl-bz-form textarea,.kl-bz-adm textarea{resize:vertical;min-height:90px}
+.kl-bz-form :focus,.kl-bz-adm :focus,#kl-bz-admin-form :focus{outline:2px solid var(--fis);outline-offset:1px}
+.kl-bz-hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0}
+.kl-bz-actions{display:flex;align-items:center;gap:12px;margin-top:12px;flex-wrap:wrap}
+.kl-bz-actions .btn{margin-left:auto}
+.kl-bz-count{font:.78rem "JetBrains Mono",monospace;color:var(--muted)}
+.kl-bz-status{font-size:.9rem;color:var(--muted)}.kl-bz-status.ok{color:var(--kl-c-green)}.kl-bz-status.bad{color:var(--kl-c-red)}
+.kl-bz-note{font-size:.8rem;color:var(--muted);margin:10px 0 0}
+.kl-bz-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:28px 0 12px}
+.kl-bz-head h3{margin:0}
+.kl-bz-filter{min-width:260px}
+.kl-bz-list{display:grid;gap:12px}
+.kl-bz-empty{color:var(--muted)}
+.kl-bz-item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;min-width:0;overflow-wrap:anywhere}
+.kl-bz-item.is-hidden{opacity:.6;border-style:dashed}
+.kl-bz-item header{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.kl-bz-item header small{color:var(--muted);font-size:.82rem}
+.kl-bz-tipo,.kl-bz-state{font:600 .7rem/1 "JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.05em;padding:5px 8px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
+.kl-bz-tipo{color:var(--fis);border-color:var(--fis)}
+.kl-bz-item.is-done .kl-bz-state{color:var(--kl-c-green);border-color:var(--kl-c-green)}
+.kl-bz-item p{margin:0}
+.kl-bz-resp{margin-top:10px;padding:10px 12px;border-radius:10px;background:var(--kl-soft);border:1px solid var(--line)}
+.kl-bz-resp b{color:var(--kl-yellow);font-size:.85rem}.kl-bz-resp small{color:var(--muted)}
+.kl-bz-resp p{margin-top:4px}
+.kl-bz-adm{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);display:grid;gap:8px}
+.kl-bz-adm-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.kl-bz-adm .kl-chk{gap:6px;justify-content:flex-start}
+.kl-bz-del{color:var(--kl-c-red)!important}
+.kl-bz-admin{margin-top:18px;display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.kl-bz-link{background:none;border:0;padding:0;color:var(--muted);font-size:.82rem;text-decoration:underline;cursor:pointer}
+#kl-bz-admin-form{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#kl-bz-admin-form[hidden]{display:none}
+#kl-bz-admin-form input{width:220px}
+#kl-bz-admin-msg{font-size:.85rem;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -544,6 +607,45 @@ mjx-container.kl-wide{display:block!important;max-width:100%;overflow-x:auto;ove
       <span class="go">Entrar →</span>
     </a><!-- /AA:CARD -->
   </div>
+  <!-- KL:BUZON -->
+  <div class="kl-buzon" id="kl-buzon">
+    <div class="eyebrow">Buzón de Khito Labs</div>
+    <h2>Sugerencias y quejas</h2>
+    <p class="lead">¿Algo no se entiende, encontraste un error o se te ocurre un tema nuevo? Escríbelo aquí. No necesitas cuenta y puedes hacerlo de forma anónima.</p>
+    <form class="kl-bz-form" id="kl-bz-form" novalidate>
+      <div class="kl-bz-row">
+        <label>Tipo
+          <select id="kl-bz-tipo"><option>Sugerencia</option><option>Queja</option><option>Error en el contenido</option><option>Otro</option></select>
+        </label>
+        <label><span class="kl-bz-lt">Tema o página <em>(opcional)</em></span>
+          <input id="kl-bz-pagina" maxlength="120" placeholder="Leyes de Newton, ejemplo 2">
+        </label>
+        <label><span class="kl-bz-lt">Nombre <em>(opcional)</em></span>
+          <input id="kl-bz-nombre" maxlength="40" placeholder="Anónimo" autocomplete="off">
+        </label>
+      </div>
+      <label class="kl-bz-msg">Mensaje
+        <textarea id="kl-bz-mensaje" maxlength="1500" rows="4" placeholder="Cuéntanos qué mejorarías o qué salió mal."></textarea>
+      </label>
+      <input class="kl-bz-hp" id="kl-bz-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="kl-bz-actions">
+        <span class="kl-bz-count" id="kl-bz-count">0 / 1500</span>
+        <span class="kl-bz-status" id="kl-bz-status" role="status" aria-live="polite"></span>
+        <button type="submit" class="btn" id="kl-bz-send">Enviar</button>
+      </div>
+      <p class="kl-bz-note">Los mensajes se publican abajo, junto con su respuesta. No escribas datos personales.</p>
+    </form>
+    <div class="kl-bz-head">
+      <h3>Mensajes recibidos</h3>
+      <div class="kl-seg kl-bz-filter" id="kl-bz-filter"><button data-f="all" aria-pressed="true">Todos</button><button data-f="open" aria-pressed="false">Pendientes</button><button data-f="done" aria-pressed="false">Resueltos</button></div>
+    </div>
+    <div class="kl-bz-list" id="kl-bz-list"></div>
+    <div class="kl-bz-admin">
+      <button type="button" class="kl-bz-link" id="kl-bz-admin-btn">Acceso de administrador</button>
+      <form id="kl-bz-admin-form" hidden><input type="password" id="kl-bz-key" placeholder="Clave de administrador" autocomplete="current-password"><button class="btn ghost" type="submit">Entrar</button><span id="kl-bz-admin-msg"></span></form>
+    </div>
+  </div>
+  <!-- /KL:BUZON -->
 </section>
 
 <!-- ============ FÍSICA ============ -->
@@ -13036,6 +13138,179 @@ pinta();programa();
 /* si la pestaña estuvo dormida (celular, laptop cerrada), revisa al volver */
 document.addEventListener('visibilitychange',function(){if(!document.hidden)pinta()});
 window.addEventListener('focus',pinta);
+})();
+</script>
+<script>
+/* ===== Khito Labs · Temario y prerrequisitos al inicio de cada curso ===== */
+(function(){
+  /* n = necesario · p = en paralelo · r = recomendado */
+  const PRE={
+    'fisica-1':{base:'Álgebra y trigonometría de secundaria. Las derivadas se usan desde Cinemática: puedes llevar Cálculo 1 en paralelo.',
+      req:[['precalculo','n','funciones, trigonometría y vectores en el plano'],['calculo-1','p','derivada como razón de cambio: v = dx/dt']]},
+    'fisica-2':{base:'Leyes de Newton, trabajo y energía, y la idea de integral como suma.',
+      req:[['fisica-1','n','dinámica, energía y rotación'],['calculo-2','n','integrales y la EDO del oscilador ẍ + ω²x = 0']]},
+    'fisica-3':{base:'Fuerza, trabajo y energía potencial de Física 1; integrales de línea y de superficie para Gauss y Ampère.',
+      req:[['fisica-1','n','fuerza, trabajo y energía potencial'],['calculo-2','n','integrales definidas'],['calculo-3','p','integrales de línea y de superficie, flujo']]},
+    'mecanica-clasica':{base:'Mecánica newtoniana de Física 1–2 escrita con matrices, EDO lineales y cálculo vectorial.',
+      req:[['fisica-1','n','leyes de Newton, energía, momento y rotación'],['fisica-2','n','oscilaciones'],['calculo-3','n','gradiente, integrales múltiples y coordenadas curvilíneas'],['algebra-lineal','n','matrices, rotaciones y autovalores (tensor de inercia, modos normales)'],['ecuaciones-diferenciales','r','EDO lineales de segundo orden']]},
+    'electromagnetismo':{base:'Electricidad y magnetismo de Física 3, ahora con análisis vectorial completo y ecuaciones en derivadas parciales.',
+      req:[['fisica-3','n','Coulomb, Gauss, Ampère y Faraday'],['calculo-3','n','divergencia, rotacional, teoremas de Gauss y Stokes'],['ecuaciones-diferenciales','r','ecuación de Laplace y separación de variables'],['mecanica-clasica','r','para la unidad de relatividad']]},
+    'fisica-moderna':{base:'Relatividad especial y física cuántica a partir de la física clásica de los cursos básicos.',
+      req:[['fisica-1','n','cinemática, dinámica y energía'],['fisica-2','n','ondas y termodinámica'],['fisica-3','n','campos y ondas electromagnéticas'],['calculo-2','n','integrales'],['algebra-lineal','r','autovalores y producto interno para la parte cuántica']]},
+    'termo-estadistica':{base:'La termodinámica de Física 2 con derivadas parciales, y la mecánica estadística apoyada en el espacio de fases.',
+      req:[['fisica-2','n','primera ley, gas ideal y ciclos'],['calculo-3','n','derivadas parciales y diferenciales totales'],['mecanica-clasica','r','hamiltoniano y espacio de fases'],['fisica-moderna','r','niveles cuánticos para la Unidad VI']]},
+    'optica':{base:'Ondas de Física 2 y ecuaciones de Maxwell; Fourier para difracción.',
+      req:[['fisica-2','n','ondas y superposición'],['fisica-3','n','ecuaciones de Maxwell (o Electromagnetismo)'],['calculo-3','n','series de Fourier'],['ecuaciones-diferenciales','r','transformada de Fourier']]},
+    'nuclear-particulas':{base:'Mecánica cuántica y relatividad especial de Física moderna; dispersión y multipolos de los cursos intermedios.',
+      req:[['fisica-moderna','n','pozo finito, efecto túnel, átomo de hidrógeno, spin y 4-momentos'],['mecanica-clasica','r','dispersión de Rutherford y fuerzas centrales'],['electromagnetismo','r','multipolos y radiación']]},
+    'precalculo':{base:'Álgebra de secundaria: operaciones, fracciones, potencias y ecuaciones lineales. No necesitas ningún curso previo de la página.',
+      req:[]},
+    'calculo-1':{base:'Funciones y sus gráficas, trigonometría, exponenciales y logaritmos.',
+      req:[['precalculo','n','funciones, trigonometría, exponenciales y logaritmos']]},
+    'calculo-2':{base:'Límites y derivadas, regla de la cadena y gráficas de funciones.',
+      req:[['calculo-1','n','límites, derivadas y regla de la cadena'],['precalculo','r','coordenadas polares y cónicas']]},
+    'calculo-3':{base:'Integración de una variable y geometría de vectores en el espacio.',
+      req:[['calculo-2','n','técnicas de integración, series y polares'],['algebra-lineal','p','vectores, determinantes y matrices']]},
+    'algebra-lineal':{base:'Álgebra de secundaria y vectores en el plano. No hace falta cálculo.',
+      req:[['precalculo','n','álgebra y sistemas de ecuaciones'],['fisica-1','r','vectores y componentes']]},
+    'variable-compleja':{base:'Los complejos se construyen sobre matrices 2×2 y el cálculo de varias variables.',
+      req:[['algebra-lineal','n','matrices de rotación, autovalores y espacios complejos'],['calculo-3','n','derivadas parciales, jacobiano y teorema de Green'],['calculo-2','n','series']]},
+    'ecuaciones-diferenciales':{base:'Cálculo completo y álgebra lineal; variable compleja para invertir transformadas.',
+      req:[['calculo-3','n','series de Taylor y de Fourier, derivadas parciales'],['algebra-lineal','n','autovalores, producto interno y teorema espectral'],['variable-compleja','r','teorema de los residuos']]},
+    'dinamica-no-lineal':{base:'Sistemas de EDO, su linealización y la clasificación por autovalores.',
+      req:[['ecuaciones-diferenciales','n','EDO autónomas y sistemas x′ = Ax'],['algebra-lineal','n','autovalores, traza y determinante'],['mecanica-clasica','r','oscilaciones y espacio de fases']]}
+  };
+  const LBL={n:'Necesario',p:'En paralelo',r:'Recomendado'};
+  const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const title=id=>{const t=(window.KL_TREE||{})[id];return t?String(t.title).replace(/<[^>]*>/g,''):id};
+  function build(id){
+    const v=document.querySelector('.view[data-view="'+id+'"]');
+    if(!v||v.querySelector('.kl-tp'))return;
+    const P=PRE[id]; if(!P)return;
+    /* temario: unidades y temas tal como aparecen en la página */
+    const units=[];
+    [...v.children].forEach(el=>{
+      if(/^H2$/.test(el.tagName)&&!el.closest('.block')){
+        let n=el.nextElementSibling; while(n&&!n.classList.contains('topics')&&n.tagName!=='H2')n=n.nextElementSibling;
+        if(!n||!n.classList.contains('topics'))return;
+        const name=el.textContent.trim().replace(/\s+/g,' ');
+        if(/^cierre$/i.test(name))return;
+        const items=[...n.querySelectorAll('a.topic, a[href^="#"]')].filter(a=>a.querySelector('h3')).map(a=>[a.getAttribute('href'),a.querySelector('h3').innerHTML]);
+        if(items.length)units.push([name,items]);
+      }
+    });
+    const old=[...v.querySelectorAll('.block')].find(b=>{const h=b.querySelector('h2');return h&&/Temario y prerrequisitos/.test(h.textContent)});
+    const pre=P.req.length?'<ul class="kl-pre">'+P.req.map(([c,k,why])=>'<li><a href="#'+c+'"><span class="kl-pre-k kl-'+k+'">'+LBL[k]+'</span><b>'+esc(title(c))+'</b></a><small>'+esc(why)+'</small></li>').join('')+'</ul>':'';
+    const tem=units.map(([u,its])=>'<div class="kl-unit"><h3>'+esc(u)+'</h3><ol>'+its.map(([h,t])=>'<li><a href="'+esc(h)+'">'+t+'</a></li>').join('')+'</ol></div>').join('');
+    const box=document.createElement('div');
+    box.className='block kl-tp';
+    box.innerHTML='<h2><span class="ico">☰</span>Temario y prerrequisitos</h2>'
+      +'<div class="kl-tp-pre"><h3 class="kl-tp-h">Antes de empezar</h3><p>'+esc(P.base)+'</p>'+pre+'</div>'
+      +(tem?'<div class="kl-tp-tem"><h3 class="kl-tp-h">Temario</h3><div class="kl-units">'+tem+'</div></div>':'')
+      +(old&&old.querySelector('ul')?'<details class="kl-tp-more"><summary>Qué necesitas en cada unidad</summary></details>':'');
+    if(old&&old.querySelector('ul')){box.querySelector('details').appendChild(old.querySelector('ul'));old.remove()}
+    const lead=v.querySelector(':scope > p.lead')||v.querySelector(':scope > h1');
+    lead.insertAdjacentElement('afterend',box);
+    const run=()=>{if(window.MathJax&&MathJax.typesetPromise)MathJax.typesetPromise([box]).catch(()=>{})};
+    if(window.MathJax&&MathJax.startup&&MathJax.startup.promise)MathJax.startup.promise.then(run);else window.addEventListener('load',()=>setTimeout(run,80));
+  }
+  function all(){Object.keys(PRE).forEach(build)}
+  all();
+  window.addEventListener('hashchange',()=>{const id=(location.hash||'').slice(1);if(PRE[id])build(id)});
+})();
+</script>
+<script>
+/* ===== Khito Labs · Buzón de sugerencias (Google Apps Script) ===== */
+window.KL_BUZON_URL = window.KL_BUZON_URL || '';
+(function(){
+  const URL=window.KL_BUZON_URL, $=id=>document.getElementById(id);
+  const form=$('kl-bz-form'); if(!form)return;
+  const LS={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{v==null?localStorage.removeItem(k):localStorage.setItem(k,v)}catch(e){}}};
+  const esc=s=>String(s==null?'':s).replace(/^'/,'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const fecha=s=>{const d=new Date(s);return isNaN(d)?'':d.toLocaleDateString('es-PE',{day:'numeric',month:'short',year:'numeric'})};
+  let key=LS.get('kl-bz-key'), items=[], filtro='all', admin=false;
+  const status=(m,ok)=>{const s=$('kl-bz-status');s.textContent=m;s.className='kl-bz-status'+(ok===true?' ok':ok===false?' bad':'')};
+  const get=q=>fetch(URL+'?'+q).then(r=>r.json());
+  const post=o=>fetch(URL,{method:'POST',body:JSON.stringify(o)}).then(r=>r.json());
+  $('kl-bz-mensaje').addEventListener('input',e=>{$('kl-bz-count').textContent=e.target.value.length+' / 1500'});
+  if(!URL){
+    $('kl-bz-send').disabled=true;
+    status('El buzón se activará muy pronto.');
+    $('kl-bz-list').innerHTML='<p class="kl-bz-empty">Todavía no hay mensajes.</p>';
+    $('kl-bz-filter').hidden=true; document.querySelector('.kl-bz-admin').hidden=true;
+    return;
+  }
+  function render(){
+    const list=$('kl-bz-list');
+    const vis=items.filter(x=>filtro==='all'||(filtro==='done'?x.resuelto:!x.resuelto));
+    if(!vis.length){list.innerHTML='<p class="kl-bz-empty">'+(items.length?'No hay mensajes en este filtro.':'Todavía no hay mensajes. ¡Sé el primero!')+'</p>';return}
+    list.innerHTML=vis.map(x=>{
+      const adm=admin?'<div class="kl-bz-adm" data-id="'+esc(x.id)+'">'
+        +'<textarea rows="2" placeholder="Escribe tu respuesta…">'+esc(x.respuesta)+'</textarea>'
+        +'<div class="kl-bz-adm-row"><button class="btn" data-a="reply">Guardar respuesta</button>'
+        +'<label class="kl-chk"><input type="checkbox" data-a="resolve"'+(x.resuelto?' checked':'')+'> Resuelto</label>'
+        +'<button class="btn ghost" data-a="hide" data-v="'+(x.oculto?'0':'1')+'">'+(x.oculto?'Mostrar':'Ocultar')+'</button>'
+        +'<button class="btn ghost kl-bz-del" data-a="delete">Eliminar</button></div></div>':'';
+      return '<article class="kl-bz-item'+(x.resuelto?' is-done':'')+(x.oculto?' is-hidden':'')+'">'
+        +'<header><span class="kl-bz-tipo">'+esc(x.tipo)+'</span>'
+        +'<span class="kl-bz-state">'+(x.resuelto?'✓ Resuelto':'Pendiente')+'</span>'
+        +(x.oculto?'<span class="kl-bz-state">Oculto</span>':'')
+        +'<small>'+esc(x.nombre||'Anónimo')+' · '+fecha(x.fecha)+(x.pagina?' · '+esc(x.pagina):'')+'</small></header>'
+        +'<p>'+esc(x.mensaje).replace(/\n/g,'<br>')+'</p>'
+        +(x.respuesta?'<div class="kl-bz-resp"><b>Respuesta de Khito Labs</b>'+(x.fecha_respuesta?' <small>· '+fecha(x.fecha_respuesta)+'</small>':'')+'<p>'+esc(x.respuesta).replace(/\n/g,'<br>')+'</p></div>':'')
+        +adm+'</article>';
+    }).join('');
+  }
+  function load(){
+    $('kl-bz-list').innerHTML='<p class="kl-bz-empty">Cargando mensajes…</p>';
+    return get('action=list'+(key?'&key='+encodeURIComponent(key):'')).then(d=>{
+      items=(d&&d.items)||[]; admin=!!(d&&d.admin);
+      if(key&&!admin){key=null;LS.set('kl-bz-key',null)}
+      $('kl-bz-admin-btn').textContent=admin?'Salir del modo administrador':'Acceso de administrador';
+      render();
+    }).catch(()=>{$('kl-bz-list').innerHTML='<p class="kl-bz-empty">No se pudieron cargar los mensajes. Intenta más tarde.</p>'});
+  }
+  form.addEventListener('submit',e=>{
+    e.preventDefault();
+    const m=$('kl-bz-mensaje').value.trim();
+    if(m.length<5){status('Escribe un mensaje de al menos 5 caracteres.',false);$('kl-bz-mensaje').focus();return}
+    $('kl-bz-send').disabled=true;status('Enviando…');
+    post({action:'add',tipo:$('kl-bz-tipo').value,mensaje:m,nombre:$('kl-bz-nombre').value.trim(),pagina:$('kl-bz-pagina').value.trim(),hp:$('kl-bz-hp').value})
+      .then(d=>{
+        if(d&&d.ok){form.reset();$('kl-bz-count').textContent='0 / 1500';status('¡Gracias! Tu mensaje llegó.',true);load()}
+        else status(d&&d.error==='espera'?'Hay muchos mensajes ahora mismo. Intenta en un minuto.':'No se pudo enviar. Revisa el mensaje e intenta otra vez.',false);
+      })
+      .catch(()=>status('No se pudo enviar. Revisa tu conexión.',false))
+      .finally(()=>{$('kl-bz-send').disabled=false});
+  });
+  $('kl-bz-filter').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;filtro=b.dataset.f;
+    $('kl-bz-filter').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));render()});
+  $('kl-bz-admin-btn').addEventListener('click',()=>{
+    if(admin){key=null;LS.set('kl-bz-key',null);admin=false;load();return}
+    const f=$('kl-bz-admin-form');f.hidden=!f.hidden;if(!f.hidden)$('kl-bz-key').focus();
+  });
+  $('kl-bz-admin-form').addEventListener('submit',e=>{
+    e.preventDefault();const k=$('kl-bz-key').value;$('kl-bz-admin-msg').textContent='Comprobando…';
+    get('action=auth&key='+encodeURIComponent(k)).then(d=>{
+      if(d&&d.ok){key=k;LS.set('kl-bz-key',k);$('kl-bz-admin-form').hidden=true;$('kl-bz-key').value='';$('kl-bz-admin-msg').textContent='';load()}
+      else $('kl-bz-admin-msg').textContent='Clave incorrecta.';
+    }).catch(()=>{$('kl-bz-admin-msg').textContent='Sin conexión.'});
+  });
+  $('kl-bz-list').addEventListener('click',e=>{
+    const b=e.target.closest('[data-a]');if(!b||b.tagName==='INPUT')return;
+    const box=b.closest('.kl-bz-adm'),id=box.dataset.id,a=b.dataset.a;
+    if(a==='delete'&&!b.dataset.sure){b.dataset.sure='1';b.textContent='¿Seguro? Eliminar';return}
+    const o={action:a,id:id,key:key};
+    if(a==='reply')o.respuesta=box.querySelector('textarea').value;
+    if(a==='hide')o.valor=b.dataset.v==='1';
+    b.disabled=true;post(o).then(d=>{if(!d||!d.ok)throw 0;return load()}).catch(()=>{b.disabled=false;b.textContent='Error, reintenta'});
+  });
+  $('kl-bz-list').addEventListener('change',e=>{
+    const c=e.target.closest('input[data-a="resolve"]');if(!c)return;
+    const id=c.closest('.kl-bz-adm').dataset.id;c.disabled=true;
+    post({action:'resolve',id:id,key:key,valor:c.checked}).then(()=>load()).catch(()=>{c.disabled=false});
+  });
+  load();
 })();
 </script>
 </body>
